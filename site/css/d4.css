@@ -48,3 +48,5 @@ body.d4{--bg:#0e1626;--surface:#16213a;--fg:#eef1f7;--muted:#aab5cc;--line:#2a37
 @media (max-width:59.99rem){.river{display:none}.panel{border-left:6px solid var(--river);margin-left:.6rem;padding-left:1.1rem}}
 @media (prefers-color-scheme:light){:root:not([data-theme="dark"]) body.d4 .strip{background:repeating-linear-gradient(90deg,transparent 0 46px,color-mix(in srgb,var(--brick) 10%,transparent) 46px 48px),linear-gradient(180deg,color-mix(in srgb,var(--brick) 30%,var(--bg)) 0 1.4rem,transparent 1.4rem),var(--bg)}}
 :root[data-theme="light"] body.d4 .strip{background:repeating-linear-gradient(90deg,transparent 0 46px,color-mix(in srgb,var(--brick) 10%,transparent) 46px 48px),linear-gradient(180deg,color-mix(in srgb,var(--brick) 30%,var(--bg)) 0 1.4rem,transparent 1.4rem),var(--bg)}
+.panel:focus-visible{outline:3px solid var(--river);outline-offset:-6px}
+.tiles figcaption{font-size:.95rem}

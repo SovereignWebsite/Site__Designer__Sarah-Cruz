@@ -42,3 +42,7 @@ body.d5{--bg:#e8dcc6;--surface:#fbf6ea;--fg:#2a2118;--muted:#5f5140;--line:#cdbb
 .big{font-family:var(--serif);font-size:clamp(1.3rem,3vw,2rem);max-width:44rem}
 .d5 .facts li{background:var(--bg)}
 @media (max-width:44rem){.papers{grid-template-columns:1fr 1fr}.scene{height:auto;min-height:36rem}.back-cat{width:34vw;left:2%}.back-dog{width:32vw;right:2%}.jack{width:72vw}}
+html:has(body.d5){overflow-x:clip}
+.d5 main{overflow-x:clip}
+@media (max-width:44rem){.sheet,.sheet.s1,.sheet.s2,.sheet.s3{transform:none}.back-dog{right:4%;width:28vw}.back-cat{left:4%;width:30vw}}
+.piece figcaption,.paper figcaption{font-size:1rem}

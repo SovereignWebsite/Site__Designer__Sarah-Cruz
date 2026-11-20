@@ -108,10 +108,10 @@ def header(root, current, links):
     """The top bar: Sarah's sections, Start here, Use with your AI, the chooser, theme and family menu."""
     nav = "".join(f'<li><a href="#{h}">{e(t)}</a></li>' for h, t in links)
     return (f'<header class="top"><div class="bar"><a class="name" href="#main">Sarah Cruz</a>'
-            f'<nav aria-label="Sections"><ul>{nav}</ul></nav><a class="hlink" href="{root}start/">Start here</a><a class="hlink" href="{root}agents/">Use with your AI</a>{chooser(root, current)}'
+            f'<nav aria-label="Sections"><ul>{nav}</ul></nav><a class="hlink" href="{root}start/">For Sarah: start here</a><a class="hlink" href="{root}agents/">Use this site with your AI</a><a class="hlink" href="{root}admin/">How it was made</a>{chooser(root, current)}'
             f'<button class="theme" type="button" aria-label="Switch between light and dark" '
             f'title="Light or dark. Remembered in this browser only.">&#9680;</button>{FAMILY}</div>'
-            f'<div class="mobile-links"><a href="{root}start/">Start here</a><a href="{root}agents/">Use with your AI</a></div></header>')
+            f'<div class="mobile-links"><a href="{root}start/">For Sarah: start here</a><a href="{root}agents/">Use with your AI</a><a href="{root}admin/">How it was made</a></div></header>')
 
 def footer(root=""):
     return ('<footer class="foot"><div class="in">'
@@ -252,7 +252,7 @@ def d2(root):
             f'<div class="ticket"><strong>{e(p["name"])}</strong><span>{e(", ".join(p["did"]))}</span>{award(p, "star")}</div></li>'
             for p in g["projects"])
         shelves.append(f'<section class="shelf" id="{gid}"><div class="board"><h2>{e(g["title"])}</h2><p>{e(g["line"])}</p></div>'
-                       f'<ul class="row" tabindex="0" aria-label="{e(g["title"])}, scroll sideways">{packs}</ul></section>')
+                       f'<div class="rowwrap"><ul class="row" tabindex="0" aria-label="{e(g["title"])}, scroll sideways">{packs}</ul><p class="more" aria-hidden="true">Scroll for more &rarr;</p></div></section>')
     hero_p = gs["retail"]["projects"][0]
     body = f"""
 <section class="storefront">
@@ -299,7 +299,7 @@ def d3(root):
       <p class="vintage"><span>More than</span> 25 <span>years</span></p>
       <p class="bottler">Creative Director &middot; West London</p>
     </div>
-    <div class="face back" id="about">
+    <div class="face back" id="about" tabindex="0" role="region" aria-label="Back label: about Sarah">
       <h2>Back label</h2>
       {about_block("backtext")}
     </div>
@@ -321,11 +321,11 @@ def d4(root):
     for k, g in enumerate(GROUPS, 1):
         tiles = "".join(f'<figure>{img(p, root, "(max-width:44rem) 100vw, 22vw")}<figcaption><strong>{e(p["name"])}</strong> {e(p["text"][0])}{" " + award(p) if p["award"] else ""}</figcaption></figure>'
                         for p in g["projects"])
-        panels.append(f'<section class="panel" id="{g["id"]}"><p class="mapno">Map {k}</p><h2>{e(g["title"])}</h2><p class="sub">{e(g["line"])}</p><div class="tiles">{tiles}</div></section>')
+        panels.append(f'<section class="panel" id="{g["id"]}" tabindex="0" aria-label="Map {k}: {e(g["title"])}"><p class="mapno">Map {k}</p><h2>{e(g["title"])}</h2><p class="sub">{e(g["line"])}</p><div class="tiles">{tiles}</div></section>')
     body = f"""
 <div class="strip" id="strip" tabindex="0" role="region" aria-label="Sarah Cruz's work as a timeline. Scroll or use the arrow keys to travel along it.">
   <svg class="river" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 1000 100"><path d="M0 50 C 60 10, 120 90, 180 50 S 300 10, 360 50 S 480 90, 540 50 S 660 10, 720 50 S 840 90, 900 50 S 980 20, 1000 50"/></svg>
-  <section class="panel start">
+  <section class="panel start" tabindex="0" aria-label="Sarah Cruz, the start of the timeline">
     <p class="mapno">Under the bridge, at dusk</p>
     <h1>Sarah <span>Cruz</span></h1>
     <p class="roles">{ROLES}</p>
@@ -334,15 +334,15 @@ def d4(root):
     <figure class="start-art">{img(TL["mural"], root, "(max-width:44rem) 100vw, 50vw", lazy=False)}</figure>
   </section>
   {"".join(panels)}
-  <section class="panel arrive" id="timeline">
+  <section class="panel arrive" id="timeline" tabindex="0" aria-label="The Chiswick Timeline">
     <p class="mapno">Where the river arrives: 16 maps, 1592 to today</p>
     <h2>The Chiswick Timeline</h2>
     <div class="tl-grid">{timeline_figs(root, ["hug", "mural", "launch", "blake", "book"])}</div>
     <div class="tl-text">{"".join(f"<p>{t}</p>" for t in TL_TEXT)}<ul class="contrib">{"".join(f"<li>{d}</li>" for d in TL_DID)}</ul><p><a href="https://chiswicktimeline.org/">chiswicktimeline.org</a></p></div>
   </section>
-  <section class="panel" id="portraits"><p class="mapno">Since lockdown</p><h2>Cut paper portraits</h2><p class="sub">{e(PORTRAIT_QUOTE)}</p><div class="ptr">{portraits_figs(root, "(max-width:44rem) 50vw, 15vw")}</div><p>{PORTRAIT_NOTE}</p></section>
-  <section class="panel" id="about"><p class="mapno">The mapmaker</p><h2>About Sarah</h2>{about_block()}<p>{MORE}</p></section>
-  <section class="panel" id="contact"><p class="mapno">The end of the strip</p><h2>Contact</h2><p class="big">{CONTACT}</p><h3>Also: Take the Sniff Test</h3>{concept_block(root)}</section>
+  <section class="panel" id="portraits" tabindex="0" aria-label="Cut paper portraits"><p class="mapno">Since lockdown</p><h2>Cut paper portraits</h2><p class="sub">{e(PORTRAIT_QUOTE)}</p><div class="ptr">{portraits_figs(root, "(max-width:44rem) 50vw, 15vw")}</div><p>{PORTRAIT_NOTE}</p></section>
+  <section class="panel" id="about" tabindex="0" aria-label="About Sarah"><p class="mapno">The mapmaker</p><h2>About Sarah</h2>{about_block()}<p>{MORE}</p></section>
+  <section class="panel" id="contact" tabindex="0" aria-label="Contact"><p class="mapno">The end of the strip</p><h2>Contact</h2><p class="big">{CONTACT}</p><h3>Also: Take the Sniff Test</h3>{concept_block(root)}</section>
 </div>
 <nav class="legend" aria-label="Jump along the timeline"><ol>{"".join(f'<li><a href="#{g["id"]}">{e(g["title"])}</a></li>' for g in GROUPS)}<li><a href="#timeline">Chiswick Timeline</a></li><li><a href="#portraits">Portraits</a></li><li><a href="#contact">Contact</a></li></ol></nav>"""
     js = f'<script src="{root}js/strip.js" defer></script>'
@@ -373,7 +373,7 @@ def d5(root):
 <section class="sheet" id="concept"><h2><span>Take the Sniff Test</span></h2>{concept_block(root)}</section>
 <section class="sheet commission" id="contact"><h2><span>Commission a portrait</span></h2><p class="big">{CONTACT}</p><p>{MORE}</p></section>"""
     js = f'<script src="{root}js/paper.js" defer></script>'
-    return page(5, root, body, [("portraits", "Portraits"), ("about", "About"), ("packaging", "Work"), ("timeline", "Timeline"), ("contact", "Commission")], "Cut Paper", js)
+    return page(5, root, body, [("portraits", "Portraits"), ("about", "About"), ("packaging", "Work"), ("timeline", "Timeline"), ("contact", "Contact")], "Cut Paper", js)
 
 BUILDERS = {1: d1, 2: d2, 3: d3, 4: d4, 5: d5}
 

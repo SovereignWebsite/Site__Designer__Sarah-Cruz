@@ -42,3 +42,11 @@ body.d2{--bg:#14100c;--surface:#1f1913;--fg:#f4ece0;--muted:#c4b6a2;--line:#3b30
 .ptr img{box-shadow:0 25px 30px -18px rgba(0,0,0,.7)}
 .big{font-family:var(--serif);font-size:clamp(1.3rem,3vw,2rem);max-width:48rem}
 @media (max-width:52rem){.storefront{grid-template-columns:1fr;min-height:auto}.hero-pack{margin-bottom:3.5rem}.ptr{grid-template-columns:1fr 1fr}.tl-grid figure{grid-column:span 3}}
+.rowwrap{position:relative}
+.rowwrap::after{content:"";position:absolute;top:0;right:0;bottom:6.4rem;width:6rem;pointer-events:none;background:linear-gradient(90deg,transparent,var(--bg))}
+.row{scroll-snap-type:x mandatory;scroll-padding-left:max(1rem,calc((100vw - 80rem)/2))}
+.pack{width:min(84vw,30rem)}
+.pack img{height:19rem;object-fit:contain;background:#fff}
+.more{max-width:80rem;margin:.4rem auto 0;padding:0 1rem;text-align:right;color:var(--accent);font-weight:600;font-size:.95rem}
+.ticket{font-size:1rem;color:#1b1610}.ticket span{color:#3a3128}
+.tl-grid figcaption,.ptr figcaption{font-size:.95rem;color:var(--fg)}
