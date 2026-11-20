@@ -457,9 +457,11 @@ def admin_page():
 <h2>Design rounds</h2>
 <ul><li><strong>First version.</strong> One page, then five designs sharing one layout.</li>
 <li><strong>Round 1 (design.b).</strong> Contrast, target sizes, a designs index, image weight, a theme note. Rated 3 after the fixes.</li>
-<li><strong>Rebuild.</strong> Five ideas from <a href="{REPO}/blob/dev/docs/designs.md">docs/designs.md</a>: The Wine List, The Shelf, Front and Back, The Timeline, Cut Paper. Visual chooser with screenshots. Family links moved to a top-right menu.</li></ul>
+<li><strong>Rebuild.</strong> Five ideas from <a href="{REPO}/blob/dev/docs/designs.md">docs/designs.md</a>: The Wine List, The Shelf, Front and Back, The Timeline, Cut Paper. Visual chooser with screenshots. Family links moved to a top-right menu.</li>
+<li><strong>Round 2 (design.b).</strong> Keyboard access to scrolling regions, a 44px label control, no sideways scroll from 320px, clearer header links, whole pack photographs on The Shelf. Signed off at 4 on 20 November 2026.</li></ul>
+<p>Next, from design.b: more room for the strongest pack photography, photographer credits when Sarah supplies them, and one more design pass after she adds her own material.</p>
 <h2>Checks</h2>
-<p>Each round is checked at 390 and 1366 pixels, light and dark: one main heading per page, no sideways scroll, no control under 24 pixels, text contrast of 4.5:1 or better, no requests to other hosts, first load well under 1 MB. Synthetic user runs: not yet run; design.b runs them on its next audit.</p>
+<p>Each round is checked at 390 and 1366 pixels, light and dark: one main heading per page, no sideways scroll, no control under 24 pixels, text contrast of 4.5:1 or better, no requests to other hosts, first load well under 1 MB. Synthetic users (design.b, round 2, home page and The Shelf): five runs, each scoring 4 out of 5; all five would show it to a friend.</p>
 <h2>Recent commits</h2>
 <table><tr><th>Commit</th><th>When (UTC)</th><th>What</th></tr>{rows}</table>""")
 
