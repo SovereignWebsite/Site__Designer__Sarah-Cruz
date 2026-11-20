@@ -1,0 +1,26 @@
+/* Design 3: Label. Like a fine wine label: cream paper, centred serif, small capitals, double rules. */
+body.d3{--bg:#f6efdf;--surface:#fbf6ea;--fg:#2a2117;--muted:#6d5f4d;--line:#cdbb98;--accent:#8c2f1f;
+  --cream:transparent;--sage:transparent;--sky:transparent;--lilac:transparent;--blush:transparent;--peach:transparent}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body.d3{--bg:#1c1812;--surface:#252018;--fg:#efe5d0;--muted:#b6a78c;--line:#4a3f2e;--accent:#d9a066}}
+:root[data-theme="dark"] body.d3{--bg:#1c1812;--surface:#252018;--fg:#efe5d0;--muted:#b6a78c;--line:#4a3f2e;--accent:#d9a066}
+.d3{--sans:var(--serif)}
+.d3 .hero{text-align:center}
+.d3 .hero .grid{grid-template-columns:1fr;justify-items:center}
+.d3 .hero h1{font-variant:small-caps;letter-spacing:.08em;font-size:clamp(2.6rem,9vw,5rem)}
+.d3 .hero h1::before,.d3 .hero h1::after{content:"";display:block;width:6rem;height:6px;margin:.8rem auto;border-top:1px solid var(--accent);border-bottom:1px solid var(--accent)}
+.d3 .lede{margin-left:auto;margin-right:auto}.d3 .cta{justify-content:center}
+.d3 .hero-art{max-width:40rem}
+.d3 .eyebrow{color:var(--accent);letter-spacing:.3em}
+.d3 .section .head{flex-direction:column;align-items:center;text-align:center}
+.d3 .section h2{font-variant:small-caps;letter-spacing:.06em}
+.d3 .project{grid-template-columns:1fr;text-align:center;background:var(--surface);border:3px double var(--line);border-radius:2px;padding:1.5rem;margin:0 0 1.75rem}
+.d3 .project:first-of-type{padding-top:1.5rem}
+.d3 .project p{max-width:36rem;margin-left:auto;margin-right:auto}
+.d3 .contrib{display:flex;flex-wrap:wrap;justify-content:center;gap:.2rem .3rem}
+.d3 .contrib li+li::before{content:"\00B7";margin-right:.3rem}
+.d3 .contrib::before{width:100%}
+.d3 .award{border-color:var(--accent);color:var(--accent);font-variant:small-caps}
+.d3 .about .grid{grid-template-columns:1fr;text-align:center;justify-items:center}
+.d3 .about img{border-radius:50%;width:11rem}
+.d3 .facts{justify-content:center}
+.d3 .btn{border-radius:2px}

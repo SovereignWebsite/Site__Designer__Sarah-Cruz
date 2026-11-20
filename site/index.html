@@ -7,151 +7,10 @@
 <meta name="description" content="Sarah Cruz: creative director, design consultant, designer and illustrator. 25+ years in brand strategy, brand identity and packaging, with a speciality in wine and spirits. Co-creator of the Chiswick Timeline.">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23b4432c'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23fff'%3ESC%3C/text%3E%3C/svg%3E">
-<style>
-:root{
-  --bg:#fbf8f1;--surface:#ffffff;--fg:#22201c;--muted:#5f5a51;--line:#e3ddcf;--accent:#b4432c;
-  --cream:#fbf3d9;--sage:#eaf0da;--sky:#ddeef4;--lilac:#e8e7f4;--blush:#f7e3e8;--peach:#fbe9dc;
-  --tint-fg:#22201c;
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Baskerville,Georgia,serif;
-  --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#171614;--surface:#201f1c;--fg:#efebe2;--muted:#b3ac9f;--line:#34322d;--accent:#ee8a6f;
-  --cream:#2c281b;--sage:#232a1c;--sky:#1b282d;--lilac:#24232f;--blush:#2e2125;--peach:#2e231c;--tint-fg:#efebe2}}
-:root[data-theme="dark"]{
-  --bg:#171614;--surface:#201f1c;--fg:#efebe2;--muted:#b3ac9f;--line:#34322d;--accent:#ee8a6f;
-  --cream:#2c281b;--sage:#232a1c;--sky:#1b282d;--lilac:#24232f;--blush:#2e2125;--peach:#2e231c;--tint-fg:#efebe2}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 var(--sans);-webkit-text-size-adjust:100%}
-img{max-width:100%;height:auto;display:block}
-a{color:var(--accent);text-underline-offset:.15em}
-.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;z-index:10;background:var(--surface);padding:.5rem}
-.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
-h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;margin:0}
-.eyebrow{font:600 .75rem/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-
-/* family bar */
-.family{font-size:.8rem;border-bottom:1px solid var(--line);background:rgba(127,127,127,.06)}
-.family ul{list-style:none;margin:0 auto;padding:.35rem 1rem;display:flex;flex-wrap:wrap;gap:.25rem .9rem;max-width:72rem}
-.family a{color:inherit;opacity:.8;text-decoration:none}.family a:hover,.family a:focus-visible{opacity:1;text-decoration:underline}
-.family .family-sep{margin-left:auto}@media (max-width:40rem){.family .family-sep{margin-left:0}}
-
-/* site nav */
-.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;gap:1rem;min-height:3.25rem}
-.top .name{font-family:var(--serif);font-size:1.2rem;color:var(--fg);text-decoration:none;white-space:nowrap}
-.top nav{margin-left:auto;overflow-x:auto;scrollbar-width:none}
-.top nav::-webkit-scrollbar{display:none}
-.top nav ul{list-style:none;display:flex;gap:1.1rem;margin:0;padding:0;font-size:.9rem;white-space:nowrap}
-.top nav a{color:var(--muted);text-decoration:none}.top nav a:hover,.top nav a:focus-visible{color:var(--fg)}
-.theme{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:99px;width:2.1rem;height:2.1rem;flex:none;cursor:pointer;font-size:1rem;line-height:1}
-@media (max-width:44rem){.top nav{display:none}.theme{margin-left:auto}}
-
-/* hero */
-.hero{padding:clamp(2.5rem,8vw,6rem) 0 3rem}
-.hero .grid{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
-.hero h1{font-size:clamp(2.8rem,9vw,5.6rem);letter-spacing:-.01em;margin:.6rem 0 1rem}
-.roles{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.6vw,1.45rem);color:var(--muted);margin:0 0 1.5rem}
-.lede{font-size:1.1rem;max-width:36rem;margin:0 0 1.5rem}
-.cta{display:flex;flex-wrap:wrap;gap:.6rem}
-.btn{display:inline-block;padding:.65rem 1.1rem;border-radius:99px;border:1px solid var(--fg);color:var(--fg);text-decoration:none;font-size:.95rem}
-.btn.primary{background:var(--fg);color:var(--bg)}
-.btn:hover,.btn:focus-visible{border-color:var(--accent);color:var(--accent)}.btn.primary:hover,.btn.primary:focus-visible{background:var(--accent);color:#fff}
-.hero-art{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
-.hero-art figure{margin:0}
-.hero-art img{border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.08),0 10px 30px -12px rgba(0,0,0,.25)}
-.hero-art figure:nth-child(2){margin-top:2.5rem}
-.hero-art figcaption{font-size:.8rem;color:var(--muted);margin-top:.4rem}
-@media (max-width:44rem){.hero .grid{grid-template-columns:1fr}}
-
-/* about */
-.about{padding:3.5rem 0;border-top:1px solid var(--line)}
-.about .grid{display:grid;grid-template-columns:15rem 1fr;gap:clamp(1.5rem,5vw,4rem)}
-.about img{border-radius:4px;filter:grayscale(1)}
-.about h2{font-size:clamp(1.8rem,4vw,2.4rem);margin:.5rem 0 1rem}
-.about p{max-width:40rem}
-.facts{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:1.5rem 0 0}
-.facts li{border:1px solid var(--line);border-radius:99px;padding:.3rem .8rem;font-size:.85rem;color:var(--muted);background:var(--surface)}
-@media (max-width:44rem){.about .grid{grid-template-columns:1fr}.about img{max-width:12rem}}
-
-/* sections */
-.section{padding:3.5rem 0;background:var(--tint,transparent)}
-.section .head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.5rem;margin-bottom:2rem}
-.section h2{font-size:clamp(2rem,5vw,3rem)}
-.section .head p{margin:0;color:var(--muted);max-width:34rem;font-family:var(--serif);font-style:italic;font-size:1.1rem}
-.t-cream{--tint:var(--cream)}.t-sage{--tint:var(--sage)}.t-sky{--tint:var(--sky)}.t-lilac{--tint:var(--lilac)}.t-blush{--tint:var(--blush)}.t-peach{--tint:var(--peach)}
-
-.project{display:grid;grid-template-columns:minmax(0,2fr) minmax(14rem,1fr);gap:1.25rem 2.5rem;padding:1.75rem 0;border-top:1px dotted color-mix(in srgb,var(--fg) 30%,transparent)}
-.project:first-of-type{border-top:0;padding-top:0}
-.project .media{margin:0}
-.project .media button{all:unset;cursor:zoom-in;display:block;width:100%}
-.project .media button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.project .media img{border-radius:3px;width:100%}
-.project h3{font-size:1.5rem;margin-bottom:.4rem}
-.project p{margin:0 0 .9rem}
-.contrib{list-style:none;margin:0;padding:0;font-family:var(--serif);font-style:italic;color:var(--muted)}
-.contrib::before{content:"My contribution";display:block;font:600 .7rem/1.2 var(--sans);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
-.award{display:inline-block;margin-top:.9rem;font-size:.8rem;border:1px solid var(--fg);border-radius:3px;padding:.2rem .55rem;letter-spacing:.02em}
-@media (max-width:44rem){.project{grid-template-columns:1fr}}
-
-.wide{margin:0}
-.wide img{border-radius:3px;width:100%}
-
-/* timeline */
-.timeline .intro{display:grid;grid-template-columns:1.2fr 1fr;gap:2rem 3rem;margin-bottom:2rem}
-.timeline .intro p{margin:0 0 1rem}
-.mosaic{display:grid;grid-template-columns:repeat(6,1fr);gap:.6rem}
-.mosaic figure{margin:0}
-.mosaic button{all:unset;cursor:zoom-in;display:block;width:100%;height:100%}
-.mosaic button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.mosaic img{width:100%;height:100%;object-fit:cover;border-radius:3px}
-.mosaic figcaption{font-size:.8rem;color:var(--muted);margin-top:.3rem}
-.m-hug{grid-column:span 2;grid-row:span 2}.m-mural{grid-column:span 4}.m-launch{grid-column:span 2}.m-blake{grid-column:span 2}
-.m-street{grid-column:span 3}.m-book{grid-column:span 3}
-@media (max-width:44rem){.timeline .intro{grid-template-columns:1fr}.mosaic{grid-template-columns:1fr 1fr}.m-hug,.m-mural,.m-launch,.m-blake,.m-street,.m-book{grid-column:span 2;grid-row:auto}}
-
-/* portraits */
-.portraits{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;align-items:start}
-.portraits figure{margin:0}
-.portraits button{all:unset;cursor:zoom-in;display:block;width:100%}
-.portraits button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.portraits img{border-radius:3px;width:100%;box-shadow:0 8px 24px -14px rgba(0,0,0,.35)}
-.portraits figcaption{font-family:var(--serif);font-style:italic;color:var(--muted);margin-top:.4rem}
-@media (max-width:52rem){.portraits{grid-template-columns:1fr 1fr}}
-
-/* concept deck */
-.deck{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
-.deck figure{margin:0}
-.deck button{all:unset;cursor:zoom-in;display:block;width:100%}
-.deck button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.deck img{border-radius:3px;width:100%}
-.note{font-size:.95rem;color:var(--muted);max-width:44rem}
-blockquote{margin:1.5rem 0;padding:0 0 0 1rem;border-left:3px solid var(--accent);font-family:var(--serif);font-size:1.1rem;max-width:44rem}
-@media (max-width:44rem){.deck{grid-template-columns:1fr 1fr}}
-
-.more{columns:2 18rem;gap:3rem;padding:0;list-style:none}
-.more li{break-inside:avoid;margin:0 0 1.25rem}
-.more strong{font-family:var(--serif);font-weight:400;font-size:1.2rem;display:block}
-
-/* contact */
-.contact{padding:4rem 0;border-top:1px solid var(--line)}
-.contact h2{font-size:clamp(2rem,5vw,3rem);margin:.5rem 0 1rem}
-.contact p{max-width:38rem}
-footer{border-top:1px solid var(--line);padding:2rem 0 3rem;font-size:.85rem;color:var(--muted)}
-footer p{margin:0 0 .6rem;max-width:52rem}
-
-/* lightbox */
-dialog{border:0;padding:0;background:transparent;max-width:min(96vw,1600px);max-height:94vh}
-dialog::backdrop{background:rgba(10,10,10,.88)}
-dialog img{max-width:min(96vw,1600px);max-height:86vh;width:auto;margin:0 auto}
-dialog p{color:#eee;text-align:center;margin:.6rem 0 0;font-size:.9rem}
-dialog form{position:fixed;top:.75rem;right:.75rem}
-dialog form button{background:#fff;color:#111;border:0;border-radius:99px;width:2.4rem;height:2.4rem;font-size:1.3rem;cursor:pointer}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/d1.css">
 </head>
-<body>
+<body class="d1">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="family" aria-label="The Sovereign Website family">
   <ul>
@@ -166,6 +25,10 @@ dialog form button{background:#fff;color:#111;border:0;border-radius:99px;width:
   </ul>
 </nav>
 
+<nav class="designs" aria-label="Choose a design">
+  <div class="wrap"><span>Choose a design</span>
+  <ul><li><a href="designs/1.html" aria-current="page">1. Editorial</a></li><li><a href="designs/2.html">2. Gallery</a></li><li><a href="designs/3.html">3. Label</a></li><li><a href="designs/4.html">4. Showcase</a></li><li><a href="designs/5.html">5. Cut paper</a></li></ul></div>
+</nav>
 <header class="top">
   <div class="wrap">
     <a class="name" href="#main">Sarah Cruz</a>

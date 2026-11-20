@@ -1,0 +1,22 @@
+/* Design 2: Gallery. The work first: full width images, quiet sans type, no tints. */
+body.d2{--bg:#ffffff;--surface:#f6f6f4;--fg:#111111;--muted:#666660;--line:#e6e6e2;--accent:#111111;--serif:var(--sans)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body.d2{--bg:#0e0e0e;--surface:#191919;--fg:#f2f2f2;--muted:#9a9a96;--line:#262626;--accent:#f2f2f2}}
+:root[data-theme="dark"] body.d2{--bg:#0e0e0e;--surface:#191919;--fg:#f2f2f2;--muted:#9a9a96;--line:#262626;--accent:#f2f2f2}
+.d2 .section{--tint:transparent;border-top:1px solid var(--line)}
+.d2 h1,.d2 h2,.d2 h3{font-weight:600;letter-spacing:-.02em}
+.d2 .hero h1{font-size:clamp(3rem,11vw,7rem)}
+.d2 .roles,.d2 .section .head p,.d2 .contrib,.d2 .portraits figcaption{font-style:normal}
+.d2 .hero .grid{grid-template-columns:1fr}
+.d2 .hero-art{grid-template-columns:3fr 1fr;order:-1}
+.d2 .hero-art figure:nth-child(2){margin-top:0}
+.d2 .hero-art img{box-shadow:none;border-radius:0}
+.d2 .project{grid-template-columns:1fr 1fr 1fr;border-top:0;padding:2.5rem 0}
+.d2 .project .media{grid-column:1/-1}
+.d2 .project .media img{border-radius:0}
+.d2 .project>div{display:contents}
+.d2 .project h3{font-size:1.25rem}
+.d2 .contrib{display:flex;flex-wrap:wrap;gap:.2rem .8rem;align-content:start}
+.d2 .contrib::before{width:100%}
+.d2 .about img{filter:none;border-radius:0}
+.d2 .btn{border-radius:0}.d2 .designs a{border-radius:0}
+@media (max-width:44rem){.d2 .project{grid-template-columns:1fr}.d2 .hero-art{grid-template-columns:2fr 1fr}}
