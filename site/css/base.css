@@ -22,9 +22,9 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;margin:0}
 .eyebrow{font:600 .75rem/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 
 /* family bar */
-.family{font-size:.8rem;border-bottom:1px solid var(--line);background:rgba(127,127,127,.06)}
+.family{font-size:.875rem;border-bottom:1px solid var(--line);background:rgba(127,127,127,.06)}
 .family ul{list-style:none;margin:0 auto;padding:.35rem 1rem;display:flex;flex-wrap:wrap;gap:.25rem .9rem;max-width:72rem}
-.family a{color:inherit;opacity:.8;text-decoration:none}.family a:hover,.family a:focus-visible{opacity:1;text-decoration:underline}
+.family a{color:var(--muted);text-decoration:none;display:inline-block;min-height:24px;line-height:24px}.family a:hover,.family a:focus-visible{color:var(--fg);text-decoration:underline}
 .family .family-sep{margin-left:auto}@media (max-width:40rem){.family .family-sep{margin-left:0}}
 
 /* site nav */
@@ -34,7 +34,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;margin:0}
 .top nav{margin-left:auto;overflow-x:auto;scrollbar-width:none}
 .top nav::-webkit-scrollbar{display:none}
 .top nav ul{list-style:none;display:flex;gap:1.1rem;margin:0;padding:0;font-size:.9rem;white-space:nowrap}
-.top nav a{color:var(--muted);text-decoration:none}.top nav a:hover,.top nav a:focus-visible{color:var(--fg)}
+.top nav a{color:var(--muted);text-decoration:none;display:inline-block;min-height:24px;line-height:24px;padding:2px 0}.top nav a:hover,.top nav a:focus-visible{color:var(--fg)}
 .theme{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:99px;width:2.1rem;height:2.1rem;flex:none;cursor:pointer;font-size:1rem;line-height:1}
 @media (max-width:44rem){.top nav{display:none}.theme{margin-left:auto}}
 
@@ -138,6 +138,7 @@ dialog img{max-width:min(96vw,1600px);max-height:86vh;width:auto;margin:0 auto}
 dialog p{color:#eee;text-align:center;margin:.6rem 0 0;font-size:.9rem}
 dialog form{position:fixed;top:.75rem;right:.75rem}
 dialog form button{background:#fff;color:#111;border:0;border-radius:99px;width:2.4rem;height:2.4rem;font-size:1.3rem;cursor:pointer}
+@media print{.designs,.family,.top,.theme,dialog{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* choose a design */
@@ -145,6 +146,6 @@ dialog form button{background:#fff;color:#111;border:0;border-radius:99px;width:
 .designs .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:.3rem .9rem;padding-top:.4rem;padding-bottom:.4rem}
 .designs span{font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.7rem;color:var(--muted)}
 .designs ul{list-style:none;display:flex;flex-wrap:wrap;gap:.3rem;margin:0;padding:0}
-.designs a{display:inline-block;padding:.15rem .6rem;border:1px solid var(--line);border-radius:99px;color:var(--fg);text-decoration:none}
+.designs a{display:inline-block;min-height:24px;line-height:22px;padding:0 .6rem;border:1px solid var(--line);border-radius:99px;color:var(--fg);text-decoration:none}
 .designs a:hover,.designs a:focus-visible{border-color:var(--accent);color:var(--accent)}
 .designs a[aria-current="page"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}

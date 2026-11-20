@@ -1,9 +1,9 @@
 /* Design 4: Showcase. Dark gallery walls, copper accents from the M&S Found labels, very large type. */
 body.d4{--bg:#121110;--surface:#1c1a18;--fg:#f3ede4;--muted:#a79f93;--line:#2e2b27;--accent:#d98a4e;
   --cream:#121110;--sage:#161614;--sky:#121110;--lilac:#161614;--blush:#121110;--peach:#161614}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) body.d4{--bg:#ece8e1;--surface:#f6f3ee;--fg:#1a1816;--muted:#5d564c;--line:#d3ccc0;--accent:#a4521d;
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) body.d4{--bg:#ece8e1;--surface:#f6f3ee;--fg:#1a1816;--muted:#5d564c;--line:#d3ccc0;--accent:#8a4216;
   --cream:#ece8e1;--sage:#e5e0d7;--sky:#ece8e1;--lilac:#e5e0d7;--blush:#ece8e1;--peach:#e5e0d7}}
-:root[data-theme="light"] body.d4{--bg:#ece8e1;--surface:#f6f3ee;--fg:#1a1816;--muted:#5d564c;--line:#d3ccc0;--accent:#a4521d;
+:root[data-theme="light"] body.d4{--bg:#ece8e1;--surface:#f6f3ee;--fg:#1a1816;--muted:#5d564c;--line:#d3ccc0;--accent:#8a4216;
   --cream:#ece8e1;--sage:#e5e0d7;--sky:#ece8e1;--lilac:#e5e0d7;--blush:#ece8e1;--peach:#e5e0d7}
 .d4 .hero h1{font-size:clamp(3.4rem,13vw,9rem);line-height:.95}
 .d4 .section h2{font-size:clamp(2.6rem,8vw,5.5rem)}
@@ -13,6 +13,7 @@ body.d4{--bg:#121110;--surface:#1c1a18;--fg:#f3ede4;--muted:#a79f93;--line:#2e2b
 .d4 .project h3{font-size:2rem;color:var(--accent)}
 .d4 .project .media img{border-radius:0;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
 .d4 .award{border-color:var(--accent);color:var(--accent);grid-column:2}
-.d4 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.d4 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.d4 .btn.primary:hover,.d4 .btn.primary:focus-visible{background:var(--fg);border-color:var(--fg);color:var(--bg)}
 .d4 .about img{filter:grayscale(1) contrast(1.1)}
 @media (max-width:44rem){.d4 .project>div{grid-template-columns:1fr}.d4 .award{grid-column:auto}}
