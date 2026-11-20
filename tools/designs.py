@@ -90,11 +90,11 @@ CONCEPT_QUOTE = '"Strong brand insight: Sarah\'s focus on the sensory aspect of 
 CONTACT = 'For creative direction, design consultancy, mentoring or a cut paper portrait commission, find Sarah on <a href="https://www.linkedin.com/in/sarah-cruz-designer">LinkedIn</a> or through <a href="https://cruzandcruz.co.uk">Cruz &amp; Cruz</a>.'
 MORE = 'Also: a redesign of Terra Nostra for Bel Portugal, a famous Portuguese national brand, made with colleagues at Lewis Moberly, which included meetings in the Azores.'
 
-FAMILY = """<nav class="family" aria-label="The Sovereign Website family"><ul>
+FAMILY = """<details class="family-menu"><summary aria-label="Sovereign Website links"><span aria-hidden="true">&#8943;</span></summary><ul>
 <li><a href="https://sovereignwebsite.ai/">Sovereign Website</a></li><li><a href="https://sovereignwebsite.org/">Principles</a></li>
-<li><a href="https://sovereignwebsite.site/" aria-current="true">Hosted</a></li><li><a href="https://hub.sovereignwebsite.site/">Hub</a></li>
-<li><a href="https://vault.sovereignwebsite.site/">Vault</a></li><li class="family-sep"><a href="https://agenticcells.ai/">AgentiCCells</a></li>
-<li><a href="https://riskmandate.ai/">RiskMandate</a></li><li><a href="https://newsroom.sgit.ai/">Newsroom</a></li></ul></nav>"""
+<li><a href="https://sovereignwebsite.site/">Hosted</a></li><li><a href="https://hub.sovereignwebsite.site/">Hub</a></li>
+<li><a href="https://vault.sovereignwebsite.site/">Vault</a></li><li><a href="https://agenticcells.ai/">AgentiCCells</a></li>
+<li><a href="https://riskmandate.ai/">RiskMandate</a></li><li><a href="https://newsroom.sgit.ai/">Newsroom</a></li></ul></details>"""
 
 def chooser(root, current):
     cards = "".join(
@@ -109,7 +109,7 @@ def header(root, current, links):
     return (f'<header class="top"><div class="bar"><a class="name" href="#main">Sarah Cruz</a>'
             f'<nav aria-label="Sections"><ul>{nav}</ul></nav>{chooser(root, current)}'
             f'<button class="theme" type="button" aria-label="Switch between light and dark" '
-            f'title="Light or dark. Remembered in this browser only.">&#9680;</button></div></header>')
+            f'title="Light or dark. Remembered in this browser only.">&#9680;</button>{FAMILY}</div></header>')
 
 def footer():
     return ('<footer class="foot"><div class="in">'
@@ -135,7 +135,6 @@ def page(n, root, body, links, title, extra_js=""):
 </head>
 <body class="d{n}">
 <a class="skip" href="#main">Skip to content</a>
-{FAMILY}
 {header(root, n, links)}
 <main id="main">
 {body}
@@ -163,9 +162,9 @@ def about_block(cls="about"):
 
 def timeline_figs(root, keys):
     out = []
-    caps = {"hug": "Giving the mural some love", "launch": "Launch day", "blake": "Sir Peter Blake with his commission of the Chiswick Empire", "book": "The book created for the project"}
+    caps = {"hug": "Giving the mural some love", "launch": "Launch day", "blake": "Sir Peter Blake with his commissioned artwork of the Chiswick Empire, on the mural", "book": "The book created for the project", "mural": "The mural under the railway bridge", "street": "The Timeline beside the bus stop"}
     for k in keys:
-        cap = f"<figcaption>{caps[k]}</figcaption>" if k in caps else ""
+        cap = f"<figcaption>{caps[k]}. Photograph from Sarah Cruz's portfolio.</figcaption>"
         out.append(f'<figure class="tl-{k}">{img(TL[k], root, "(max-width:44rem) 100vw, 40vw")}{cap}</figure>')
     return "".join(out)
 
