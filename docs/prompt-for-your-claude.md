@@ -1,10 +1,12 @@
 # A prompt for your Claude
 
-## 1. Connect Claude to GitHub
+## 1. Join the organisation and connect Claude to GitHub
 
-1. Open https://claude.ai and go to Settings, then Connectors.
-2. Connect GitHub and sign in with the GitHub account that has access to `SovereignWebsite/Site__Designer__Sarah-Cruz`. (If you do not have one yet, ask Dinis to add you.)
-3. Start a new Claude Code session at https://claude.ai/code and pick that repository.
+1. Make a GitHub account if you do not have one, and send Dinis your username.
+2. Dinis invites you to the SovereignWebsite organisation as a Member and gives you write access to `SovereignWebsite/Site__Designer__Sarah-Cruz`. Both are needed, or Claude's GitHub check fails.
+3. Accept at https://github.com/orgs/SovereignWebsite/invitation (the email link may not offer an accept button).
+4. On https://claude.ai go to Settings, then Connectors, connect GitHub with the same account, and press "Check again" if it cannot see the repository.
+5. Start a new Claude Code session at https://claude.ai/code and pick that repository.
 
 ## 2. Paste this message
 

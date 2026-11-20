@@ -30,17 +30,23 @@
 <p>Sarah, this website is yours. Its files, its history and its address are in a repository you control, and they can move anywhere at any time. This page shows you how to take it over.</p>
 <h2>1. See your site</h2>
 <p>Your site is at <a href="https://sarah-cruz.designer.sovereignweb.site">sarah-cruz.designer.sovereignweb.site</a>. Use <strong>Choose a design</strong> at the top to compare the five designs, and tell us which one you want as the home page.</p>
-<h2>2. Connect Claude to GitHub</h2>
+<h2>2. Join the SovereignWebsite organisation on GitHub</h2>
 <ol>
-<li>Open <a href="https://claude.ai">claude.ai</a>, go to Settings, then Connectors, and connect GitHub.</li>
-<li>Sign in with a GitHub account that can see <a href="https://github.com/SovereignWebsite/Site__Designer__Sarah-Cruz">SovereignWebsite/Site__Designer__Sarah-Cruz</a>. If you do not have access yet, ask Dinis to add you.</li>
-<li>Start a new session at <a href="https://claude.ai/code">claude.ai/code</a> and pick that repository.</li>
+<li>If you do not have a GitHub account yet, make one at <a href="https://github.com/signup">github.com/signup</a> and send Dinis your username.</li>
+<li>Dinis invites you to the SovereignWebsite organisation as a Member and gives you write access to your site's repository. You need both, or Claude's GitHub check will fail.</li>
+<li>Accept the invitation at <a href="https://github.com/orgs/SovereignWebsite/invitation">github.com/orgs/SovereignWebsite/invitation</a>. The link in the invitation email may not offer an accept button, so use this one.</li>
 </ol>
-<h2>3. Paste this message</h2>
+<h2>3. Connect Claude to GitHub</h2>
+<ol>
+<li>Open <a href="https://claude.ai">claude.ai</a>, go to Settings, then Connectors, and connect GitHub with the same account.</li>
+<li>If Claude says it cannot see the repository, press "Check again" once you have accepted the invitation.</li>
+<li>Start a new session at <a href="https://claude.ai/code">claude.ai/code</a> and pick <a href="https://github.com/SovereignWebsite/Site__Designer__Sarah-Cruz">SovereignWebsite/Site__Designer__Sarah-Cruz</a>.</li>
+</ol>
+<h2>4. Paste this message</h2>
 <pre>I am Sarah Cruz and this repository is my portfolio website, published at https://sarah-cruz.designer.sovereignweb.site. Please read CLAUDE.md, README.md and docs/handover.md first. Projects are in tools/work.json, the other words in tools/designs.py, the looks in site/css/ and site/js/, and you rebuild every page with python3 tools/designs.py. Only use facts I give you: never invent a client, a figure or a quote, and credit every photograph. Use plain British English with no em dashes. Keep the site static, with no cookies or tracking. Push to the dev branch only; that publishes the site. Show me what you plan to change before you push.
 
 What I would like to change: (write it here)</pre>
-<h2>4. Things you might ask for</h2>
+<h2>5. Things you might ask for</h2>
 <ul><li>"Use The Wine List as my home page."</li><li>"Add these four new pet portraits." (attach the photos)</li><li>"Add my email address to the contact section."</li><li>"Remove the Butternut Box concept."</li></ul>
 <h2>Open questions for you</h2>
 <p>A few things we left out until you say: see <a href="https://github.com/SovereignWebsite/Site__Designer__Sarah-Cruz/blob/dev/docs/questions-for-sarah.md">questions for Sarah</a>. The full handover note is <a href="https://github.com/SovereignWebsite/Site__Designer__Sarah-Cruz/blob/dev/docs/handover.md">docs/handover.md</a>. You do not need to sign commits.</p>
