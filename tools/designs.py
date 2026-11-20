@@ -122,6 +122,22 @@ def footer(root=""):
             '<a href="https://github.com/SovereignWebsite/Site__Designer__Sarah-Cruz">github.com/SovereignWebsite/Site__Designer__Sarah-Cruz</a>.</p></div></footer>'
             '<dialog id="lb" aria-label="Image viewer"><form method="dialog"><button aria-label="Close">&times;</button></form><img alt=""><p></p></dialog>')
 
+BASE = "https://sarah-cruz.designer.sovereignweb.site/"
+
+def social(path, title, desc):
+    t, d = e(title), e(desc)
+    return (f'<link rel="canonical" href="{BASE}{path}">\n'
+            f'<meta property="og:type" content="website">\n<meta property="og:site_name" content="Sarah Cruz">\n'
+            f'<meta property="og:title" content="{t}">\n<meta property="og:description" content="{d}">\n'
+            f'<meta property="og:url" content="{BASE}{path}">\n<meta property="og:locale" content="en_GB">\n'
+            f'<meta property="og:image" content="{BASE}img/share.jpg">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+            f'<meta property="og:image:alt" content="Sarah Cruz, Creative Director and designer, beside her M&amp;S Found wine labels">\n'
+            f'<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="{t}">\n'
+            f'<meta name="twitter:description" content="{d}">\n<meta name="twitter:image" content="{BASE}img/share.jpg">\n'
+            f'<meta name="twitter:image:alt" content="Sarah Cruz, Creative Director and designer, beside her M&amp;S Found wine labels">')
+
+DESC = "Creative Director, design consultant, designer and illustrator. 25+ years of brand strategy, identity and packaging, with a speciality in wine and spirits. Co-creator of the Chiswick Timeline."
+
 def page(n, root, body, links, title, extra_js=""):
     name = DESIGNS[n - 1][1]
     return f"""<!doctype html>
@@ -132,6 +148,7 @@ def page(n, root, body, links, title, extra_js=""):
 <title>Sarah Cruz, Creative Director and Designer</title>
 <meta name="description" content="Sarah Cruz: creative director, design consultant, designer and illustrator. 25+ years in brand strategy, identity and packaging, with a speciality in wine and spirits. Co-creator of the Chiswick Timeline. Design: {e(name)}.">
 <meta name="color-scheme" content="light dark">
+{social("" if root == "" else f"designs/{n}.html", "Sarah Cruz, Creative Director and Designer", DESC)}
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23b4432c'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23fff'%3ESC%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="{root}css/common.css">
 <link rel="stylesheet" href="{root}css/d{n}.css">
@@ -363,7 +380,7 @@ BUILDERS = {1: d1, 2: d2, 3: d3, 4: d4, 5: d5}
 def index_page():
     items = "".join(f'<li><a href="{i}.html"><img src="../img/shots/d{i}.webp" alt="" width="640" height="400" loading="lazy"><strong>{i}. {e(n)}</strong></a><span>{e(l)}</span></li>' for i, n, l in DESIGNS)
     return f"""<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Choose a design: Sarah Cruz</title><meta name="color-scheme" content="light dark"><link rel="stylesheet" href="../css/common.css">
+<title>Choose a design: Sarah Cruz</title><meta name="color-scheme" content="light dark">{social("designs/", "Choose a design: Sarah Cruz", DESC)}<link rel="stylesheet" href="../css/common.css">
 <style>main{{max-width:64rem;margin:0 auto;padding:3rem 1rem}}h1{{font:400 2.6rem/1.1 var(--serif);margin:0 0 .5rem}}ol{{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:1.5rem}}li a{{display:block;color:var(--fg);text-decoration:none;font-size:1.1rem}}li img{{border-radius:6px;border:1px solid var(--line);margin-bottom:.5rem}}li span{{color:var(--muted)}}</style>
 </head><body><main id="main"><p class="kicker">Sarah Cruz</p><h1>Choose a design</h1><p>The same facts, five ways. The home page uses design {HOME}. The ideas behind them are in <a href="https://github.com/SovereignWebsite/Site__Designer__Sarah-Cruz/blob/dev/docs/designs.md">docs/designs.md</a>.</p>
 <ol>{items}</ol><p><a href="../">Back to the home page</a></p></main></body></html>
@@ -371,11 +388,13 @@ def index_page():
 
 import subprocess
 
-def doc_page(title, kicker, inner):
+def doc_page(title, kicker, inner, path=""):
     root = "../"
     return f"""<!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}: Sarah Cruz</title><meta name="color-scheme" content="light dark">
+<meta name="description" content="{e(title)}: Sarah Cruz's portfolio site.">
+{social(path, title + ": Sarah Cruz", DESC)}
 <link rel="stylesheet" href="{root}css/common.css"></head>
 <body><a class="skip" href="#main">Skip to content</a>
 {header(root, HOME, [])}
@@ -389,7 +408,7 @@ def doc_page(title, kicker, inner):
 REPO = "https://github.com/SovereignWebsite/Site__Designer__Sarah-Cruz"
 
 def start_page():
-    return doc_page("Start here", "For Sarah", f"""
+    return doc_page("Start here", "For Sarah", path="start/", inner=f"""
 <p>Sarah, this website is yours. Its files, its history and its address are in a repository you control, and they can move anywhere at any time. This page shows you how to take it over.</p>
 <h2>1. See your site</h2>
 <p>Your site is at <a href="https://sarah-cruz.designer.sovereignweb.site">sarah-cruz.designer.sovereignweb.site</a>. Use <strong>Choose a design</strong> at the top to compare the five designs, and tell us which one you want as the home page.</p>
@@ -409,7 +428,7 @@ What I would like to change: (write it here)</pre>
 <p>A few things we left out until you say: see <a href="{REPO}/blob/dev/docs/questions-for-sarah.md">questions for Sarah</a>. The full handover note is <a href="{REPO}/blob/dev/docs/handover.md">docs/handover.md</a>. You do not need to sign commits.</p>""")
 
 def agents_page():
-    return doc_page("Use this site with your AI", "For you and your assistant", f"""
+    return doc_page("Use this site with your AI", "For you and your assistant", path="agents/", inner=f"""
 <p>Everything on this site is also available as plain text for AI assistants, so you can ask yours about Sarah's work and get answers from her own material.</p>
 <h2>The quick way</h2>
 <p>Give your assistant this address and ask your question:</p>
@@ -426,7 +445,7 @@ def admin_page():
     except Exception:
         log = []
     rows = "".join(f'<tr><td><a href="{REPO}/commit/{h}"><code>{h}</code></a></td><td>{e(d)}</td><td>{e(m)}</td></tr>' for h, d, m in (l.split("|", 2) for l in log))
-    return doc_page("How this site was made", "Admin", f"""
+    return doc_page("How this site was made", "Admin", path="admin/", inner=f"""
 <p>This site was built on 20 November 2026 by AI agents working for Dinis Cruz, from Sarah's own portfolio and public material, with her permission. Every change is a signed commit in the <a href="{REPO}">repository</a>.</p>
 <h2>Who worked on it</h2>
 <table><tr><th>Agent</th><th>Part</th></tr>
