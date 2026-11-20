@@ -65,3 +65,16 @@ dialog form{position:fixed;top:.75rem;right:.75rem}
 dialog form button{background:#fff;color:#111;border:0;border-radius:99px;width:2.6rem;height:2.6rem;font-size:1.4rem;cursor:pointer}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 @media print{.family-menu,.top,.theme,.chooser,dialog,.aisles,.legend,.filters,.turn-btn{display:none!important}body{background:#fff;color:#000;font-size:11pt}a{color:#000}}
+.hlink{flex:none;font-size:.85rem;color:var(--fg);text-decoration:none;border-bottom:2px solid var(--accent);line-height:24px;white-space:nowrap}
+.hlink:hover{color:var(--accent)}
+.flinks{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.95rem}.flinks a{color:var(--fg);min-height:24px;line-height:24px}
+@media (max-width:52rem){.hlink{display:none}}
+.doc{max-width:46rem;margin:0 auto;padding:3rem 1rem 4rem}
+.doc h1{font:400 clamp(2.4rem,7vw,3.6rem)/1.05 var(--serif);margin:.3rem 0 1rem}
+.doc h2{font:400 1.6rem/1.2 var(--serif);margin:2.2rem 0 .6rem}
+.doc ol li,.doc ul li{margin:.35rem 0}
+.doc pre{white-space:pre-wrap;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1rem;font-size:.9rem}
+.doc table{border-collapse:collapse;width:100%;font-size:.9rem}.doc td,.doc th{border-bottom:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
+.doc code{font-size:.9em}
+.mobile-links{display:none}
+@media (max-width:52rem){.mobile-links{display:flex;gap:1rem;max-width:80rem;margin:0 auto;padding:.4rem 1rem;font-size:.85rem;border-bottom:1px solid var(--line)}.mobile-links a{color:var(--fg);min-height:24px;line-height:24px}}
