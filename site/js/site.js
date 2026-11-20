@@ -8,7 +8,7 @@
     try{localStorage.setItem('theme',next);}catch(e){}
   });
   var lb=document.getElementById('lb');if(!lb||!lb.showModal)return;
-  var li=lb.querySelector('img'),lp=lb.querySelector('p');
+  var lp=lb.querySelector('p'),li=document.createElement('img');li.alt='';lb.insertBefore(li,lp);
   function open(src,alt,txt){li.src=src;li.alt=alt;lp.textContent=txt||alt;lb.showModal();}
   document.addEventListener('click',function(ev){
     var b=ev.target.closest('button.open');

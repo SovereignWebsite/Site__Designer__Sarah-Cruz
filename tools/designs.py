@@ -120,7 +120,7 @@ def footer(root=""):
             '<p>No cookies, no tracking, no third-party scripts. Your light or dark choice is remembered in this browser only. '
             'A sovereign website, made with the <a href="https://sovereignwebsite.org/">open pattern</a>. Source: '
             '<a href="https://github.com/SovereignWebsite/Site__Designer__Sarah-Cruz">github.com/SovereignWebsite/Site__Designer__Sarah-Cruz</a>.</p></div></footer>'
-            '<dialog id="lb" aria-label="Image viewer"><form method="dialog"><button aria-label="Close">&times;</button></form><img alt=""><p></p></dialog>')
+            '<dialog id="lb" aria-label="Image viewer"><form method="dialog"><button aria-label="Close">&times;</button></form><p></p></dialog>')
 
 BASE = "https://sarah-cruz.designer.sovereignweb.site/"
 
@@ -130,10 +130,10 @@ def social(path, title, desc):
             f'<meta property="og:type" content="website">\n<meta property="og:site_name" content="Sarah Cruz">\n'
             f'<meta property="og:title" content="{t}">\n<meta property="og:description" content="{d}">\n'
             f'<meta property="og:url" content="{BASE}{path}">\n<meta property="og:locale" content="en_GB">\n'
-            f'<meta property="og:image" content="{BASE}img/share.jpg">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+            f'<meta property="og:image" content="{BASE}assets/share/card-1200x630.jpg">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
             f'<meta property="og:image:alt" content="Sarah Cruz, Creative Director and designer, beside her M&amp;S Found wine labels">\n'
             f'<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="{t}">\n'
-            f'<meta name="twitter:description" content="{d}">\n<meta name="twitter:image" content="{BASE}img/share.jpg">\n'
+            f'<meta name="twitter:description" content="{d}">\n<meta name="twitter:image" content="{BASE}assets/share/card-1200x630.jpg">\n'
             f'<meta name="twitter:image:alt" content="Sarah Cruz, Creative Director and designer, beside her M&amp;S Found wine labels">')
 
 DESC = "Creative Director, design consultant, designer and illustrator. 25+ years of brand strategy, identity and packaging, with a speciality in wine and spirits. Co-creator of the Chiswick Timeline."

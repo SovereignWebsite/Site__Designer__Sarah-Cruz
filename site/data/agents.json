@@ -3,5 +3,37 @@
  "repository": "https://github.com/SovereignWebsite/Site__Designer__Sarah-Cruz",
  "made_by": "https://github.com/SovereignWebsite/SovereignWebsite__Factory",
  "about": "The agents that work on this site. Each site agent adds its own entry: its name (role@project.person), its role and its session. Their keys are published at https://agents.sovereignweb.site/.",
- "agents": []
+ "agents": [
+  {
+   "name": "sarah-cruz.b@SovereignWebsite.dinis",
+   "role": "Site keeper: content, the five designs, checks and signed commits",
+   "session": "https://claude.ai/code/session_01Kw9UwBAh6Xwws4CiPBkYZY",
+   "signing_fingerprint": "sha256:7b80c51f6e622eff"
+  },
+  {
+   "name": "design.b@SovereignWebsite.dinis",
+   "role": "Design reviews and audits (rounds 1 and 2, signed off at 4)",
+   "session": "https://claude.ai/code/session_01Kw9UwFCJTPWFaTq4TX5vUT"
+  },
+  {
+   "name": "sites.b@SovereignWebsite.dinis",
+   "role": "Asked for the site; passes on the guidelines",
+   "session": "https://claude.ai/code/session_01Kw9UwBucXVUaNYRMcWwk67"
+  },
+  {
+   "name": "factory.b@SovereignWebsite.dinis",
+   "role": "Created the repository and its pipeline",
+   "session": "https://claude.ai/code/session_01Kw9UwBqEqrxrSBwvLEVJY6"
+  },
+  {
+   "name": "conductor.b@SovereignWebsite.dinis",
+   "role": "Keeps the team's signing keys",
+   "session": "https://claude.ai/code/session_01Kw9UwDCS5Px4dXRJUGP9Qu"
+  },
+  {
+   "name": "hub.b@SovereignWebsite.dinis",
+   "role": "Added the site to the showroom",
+   "session": "https://claude.ai/code/session_01Kw9UwB7XboTsnbPPWaMr2d"
+  }
+ ]
 }
