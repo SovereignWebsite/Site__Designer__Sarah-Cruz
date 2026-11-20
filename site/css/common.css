@@ -80,3 +80,7 @@ dialog form button{background:#fff;color:#111;border:0;border-radius:99px;width:
 @media (max-width:52rem){.mobile-links{display:flex;gap:1rem;max-width:80rem;margin:0 auto;padding:.4rem 1rem;font-size:.85rem;border-bottom:1px solid var(--line)}.mobile-links a{color:var(--fg);min-height:24px;line-height:24px}}
 .top .bar{gap:.9rem}.hlink{font-size:.8rem}
 @media (max-width:72rem){.top nav{display:none}.chooser{margin-left:auto}}
+.doc a,.doc code,.doc pre,.foot a{overflow-wrap:anywhere}
+@media (max-width:24rem){.top .bar{gap:.4rem;padding:0 .6rem}.top .name{font-size:1rem}.chooser summary{padding:0 .6rem;font-size:.8rem}.mobile-links{gap:.6rem;font-size:.8rem;flex-wrap:wrap}}
+.doc table{display:block;overflow-x:auto;max-width:100%}
+.doc td{overflow-wrap:anywhere}
