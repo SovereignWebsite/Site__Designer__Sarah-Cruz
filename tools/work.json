@@ -1,0 +1,546 @@
+[
+ {
+  "id": "packaging",
+  "title": "Packaging design",
+  "line": "Characters, colour and craft for things people pick up.",
+  "projects": [
+   {
+    "name": "Royal Ascot × Tisserand",
+    "text": [
+     "Limited edition range for Royal Ascot inspired by the colourful racing silks as the horses flash by."
+    ],
+    "did": [
+     "Concept",
+     "Label design",
+     "Illustration"
+    ],
+    "award": "",
+    "img": "ascot",
+    "alt": "Royal Ascot bath and body range by Tisserand in navy boxes banded with blurred rainbow racing-silk stripes",
+    "w": 1769,
+    "h": 489
+   },
+   {
+    "name": "Honey I'm Home!",
+    "text": [
+     "Celebrating our love of dogs by bringing Honey the Dog to life."
+    ],
+    "did": [
+     "Packaging design",
+     "Character creation",
+     "Illustration"
+    ],
+    "award": "DBA Design Effectiveness Awards winner",
+    "img": "honey",
+    "alt": "Sketches of a scruffy cartoon dog beside Honey I'm Home dog treat packs in blue and honeycomb yellow",
+    "w": 1769,
+    "h": 599
+   },
+   {
+    "name": "Divino",
+    "text": [
+     "Divinely different Italian gelato dessert comes to the UK."
+    ],
+    "did": [
+     "Packaging design",
+     "Icon design"
+    ],
+    "award": "Pentawards winner",
+    "img": "divino",
+    "alt": "Divino gelato packs with fruit set between pairs of lips, and the lips icon on green",
+    "w": 1684,
+    "h": 584
+   },
+   {
+    "name": "Fwip",
+    "text": [
+     "Bringing to life a new brand of mini ice cream parlour machines."
+    ],
+    "did": [
+     "Brand naming",
+     "Logo design",
+     "Brand identity",
+     "Packaging"
+    ],
+    "award": "",
+    "img": "fwip",
+    "alt": "Fwip ice cream tubs in teal stripes, a tray of three flavours, and the Fwip machine",
+    "w": 1710,
+    "h": 568
+   },
+   {
+    "name": "Trust Water for The Drinks Trust",
+    "text": [
+     "The Drinks Trust is a charity dedicated to the drinks and hospitality workforce. Our water brand supported their work."
+    ],
+    "did": [
+     "Label design",
+     "Illustration"
+    ],
+    "award": "",
+    "img": "trust-water",
+    "alt": "Black and white aluminium Trust Water bottles with a ripple pattern and the line Create positive ripples",
+    "w": 1556,
+    "h": 569
+   },
+   {
+    "name": "Superdrug B.",
+    "text": [
+     "Re-styling Superdrug's range of cosmetics."
+    ],
+    "did": [
+     "Packaging design"
+    ],
+    "award": "",
+    "img": "b-superdrug",
+    "alt": "Superdrug B. cosmetics in black packaging arranged in a starburst",
+    "w": 1712,
+    "h": 560
+   }
+  ]
+ },
+ {
+  "id": "independent",
+  "title": "Independent brands",
+  "line": "Winemakers with a story, and the labels that tell it.",
+  "projects": [
+   {
+    "name": "McGuigan Zero",
+    "text": [
+     "Proudly introducing innovation to the UK. Now the UK's number 1 alcohol free wine."
+    ],
+    "did": [
+     "Strategy",
+     "Brand creation",
+     "Label design",
+     "Range extension"
+    ],
+    "award": "",
+    "img": "mcguigan-zero",
+    "alt": "McGuigan Zero alcohol free wine labels with a large faint 00 behind the signature",
+    "w": 1692,
+    "h": 540
+   },
+   {
+    "name": "Maid of Bruton",
+    "text": [
+     "Medieval Bruton, Somerset made new. By Durslade Vineyard and the people behind the art world of Hauser & Wirth. Created at Barlow & Co for the very first wine from Durslade Farm Vineyard.",
+     "The vineyard sits on the site of an ancient Roman vine terrace where a Roman coin was found, inscribed with a woman holding a cornucopia of grapes. The label is a medieval interpretation of that maid, treading and eating grapes with a mischievous look in her eye."
+    ],
+    "did": [
+     "Brand creation",
+     "Label design",
+     "Illustration"
+    ],
+    "award": "",
+    "img": "maid-of-bruton",
+    "alt": "Maid of Bruton Bacchus bottles with a green line drawing of a medieval maid treading grapes, among limes",
+    "w": 1800,
+    "h": 586
+   },
+   {
+    "name": "Identity",
+    "text": [
+     "Bringing to life the embodiment of a South African winery through illustration and augmented reality."
+    ],
+    "did": [
+     "Brand world",
+     "Brand identity",
+     "Label design",
+     "Illustration"
+    ],
+    "award": "",
+    "img": "identity",
+    "alt": "Identity wine labels with a busy illustrated South African landscape, and an owl from the augmented reality animation",
+    "w": 1694,
+    "h": 550
+   },
+   {
+    "name": "PepperBox",
+    "text": [
+     "Creating a brand that is all about being the perfect partner for great food."
+    ],
+    "did": [
+     "Brand creation",
+     "Label design",
+     "Illustration"
+    ],
+    "award": "",
+    "img": "pepperbox",
+    "alt": "PepperBox Shiraz with an embossed pepper grinder seal, and peppercorns spilling from a spoon",
+    "w": 1690,
+    "h": 566
+   },
+   {
+    "name": "Vina Laguna",
+    "text": [
+     "Successfully bringing Croatian wine to the UK with great style and storytelling."
+    ],
+    "did": [
+     "Brand creation",
+     "Label design",
+     "Illustration",
+     "Tiering"
+    ],
+    "award": "DBA Design Effectiveness Awards winner",
+    "img": "vina-laguna",
+    "alt": "Vina Laguna Croatian wine bottles with silver and gold angel illustrations",
+    "w": 1180,
+    "h": 900
+   },
+   {
+    "name": "Ashdown",
+    "text": [
+     "Showing the world the beauty of English winemaking next to the Ashdown Forest."
+    ],
+    "did": [
+     "Brand creation",
+     "Label design",
+     "Illustration"
+    ],
+    "award": "",
+    "img": "ashdown",
+    "alt": "Ashdown English wine bottles in autumn leaves, each label framed by a wreath of branches",
+    "w": 1684,
+    "h": 644
+   },
+   {
+    "name": "Pol Roger canned wine",
+    "text": [
+     "Champagne house Pol Roger makes a bold venture into UK canned wines."
+    ],
+    "did": [
+     "Naming",
+     "Brand creation",
+     "Packaging design"
+    ],
+    "award": "",
+    "img": "pol-roger-igo",
+    "alt": "Pink and grey Organic Rose cans with a handwritten signature, on a pink background",
+    "w": 1676,
+    "h": 552
+   },
+   {
+    "name": "Genetie",
+    "text": [
+     "Blending history and modernity in Burgundy."
+    ],
+    "did": [
+     "Brand world",
+     "Brand identity",
+     "Label design",
+     "Illustration"
+    ],
+    "award": "",
+    "img": "genetie",
+    "alt": "Genetie Burgundy: carved stone lettering, a hanging wooden sign with a half red moon, and the finished label",
+    "w": 1800,
+    "h": 452
+   },
+   {
+    "name": "Valdivieso",
+    "text": [
+     "Historic Chilean wine brand gets a refresh."
+    ],
+    "did": [
+     "Label design",
+     "Range extension",
+     "Tiering"
+    ],
+    "award": "",
+    "img": "valdivieso",
+    "alt": "Valdivieso Chardonnay label with a vine engraving, the V crest, and dark premium bottles",
+    "w": 1800,
+    "h": 584
+   },
+   {
+    "name": "And many more",
+    "text": [
+     "Here are some other lovely wine labels I have had the pleasure and privilege to design."
+    ],
+    "did": [],
+    "award": "",
+    "img": "labels",
+    "alt": "A grid of fifteen wine labels including Love Struck, Mantlepiece, Comuna, Ruchette Doree, Mind Maze, Ancora, Elegance, Ixia, Chablis, Picpoul de Pinet and Balliamo",
+    "w": 1800,
+    "h": 1074
+   }
+  ]
+ },
+ {
+  "id": "retail",
+  "title": "Retailer exclusives",
+  "line": "Own label ranges for Marks & Spencer, Tesco, The Wine Society and Spar.",
+  "projects": [
+   {
+    "name": "M&S Found",
+    "text": [
+     "The M&S Found range set the stage for the idea and look of wine discovery ranges in retail."
+    ],
+    "did": [
+     "Naming",
+     "Brand creation",
+     "Label design",
+     "Range extension"
+    ],
+    "award": "The Drinks Business Awards 2022",
+    "img": "ms-found",
+    "alt": "M&S Found labels: black and white photographs of places off the beaten track, with a copper script logo",
+    "w": 1728,
+    "h": 976
+   },
+   {
+    "name": "M&S premium wines",
+    "text": [
+     "M&S upping the game in its premium wine offering."
+    ],
+    "did": [
+     "Brand creation",
+     "Label design"
+    ],
+    "award": "",
+    "img": "ms-premium",
+    "alt": "M&S premium wines: Nellaluna with a cherub on a crescent moon, Passerina with orange blossom, Cava, Myrtia and Poggio Tosco Chianti",
+    "w": 1800,
+    "h": 939
+   },
+   {
+    "name": "Tesco core range",
+    "text": [
+     "Redeveloping Tesco's core range of wines. Creating their new look and brand identities."
+    ],
+    "did": [
+     "Design direction",
+     "Naming",
+     "Label design of many wines"
+    ],
+    "award": "",
+    "img": "tesco-core",
+    "alt": "A line of more than twenty Tesco core range wine bottles with new labels",
+    "w": 1797,
+    "h": 484
+   },
+   {
+    "name": "Tesco Finest",
+    "text": [
+     "Tesco Finest range of 80+ wines. Telling stories of place and producer."
+    ],
+    "did": [
+     "Design direction",
+     "Brand identity",
+     "Label design of many wines"
+    ],
+    "award": "Harpers Design Awards 2023, Silver",
+    "img": "tesco-finest",
+    "alt": "Tesco Finest Chianti Classico Riserva, Sancerre and Albarino labels",
+    "w": 1670,
+    "h": 552
+   },
+   {
+    "name": "Wairau Cove",
+    "text": [
+     "A new look for one of Tesco's most popular wine brands."
+    ],
+    "did": [
+     "Brand world",
+     "Brand identity",
+     "Label design"
+    ],
+    "award": "",
+    "img": "wairau-cove",
+    "alt": "Wairau Cove New Zealand wines with a small bird logo, beside a glass of white wine",
+    "w": 1674,
+    "h": 546
+   },
+   {
+    "name": "The Wine Society own brand",
+    "text": [
+     "Refreshing the Wine Society's own brand range."
+    ],
+    "did": [
+     "Label design",
+     "Range extension"
+    ],
+    "award": "Harpers Design Awards 2023, Best Redesign",
+    "img": "wine-society",
+    "alt": "The Wine Society's own brand bottles with fine engraved illustrations of figures and a fish",
+    "w": 1746,
+    "h": 568
+   },
+   {
+    "name": "The Wine Society Generation Series",
+    "text": [
+     "Creating the Generation Series using a 'Vineline' to depict The Wine Society's 150-year history."
+    ],
+    "did": [
+     "Label design",
+     "Range extension",
+     "Collage illustration"
+    ],
+    "award": "",
+    "img": "generation-series",
+    "alt": "The Wine Society Generation Series: collage labels of Victorian figures, a penny farthing and vines",
+    "w": 1746,
+    "h": 568
+   },
+   {
+    "name": "Spar varietals",
+    "text": [
+     "Spar's varietal range takes inspiration from letterpress type."
+    ],
+    "did": [
+     "Label design",
+     "Range extension"
+    ],
+    "award": "",
+    "img": "spar",
+    "alt": "Spar varietal wines with big letterpress initials such as S, PN, M and SB, among wooden type",
+    "w": 1754,
+    "h": 562
+   }
+  ]
+ },
+ {
+  "id": "spirits",
+  "title": "Spirits",
+  "line": "Gin, whisky and snaps.",
+  "projects": [
+   {
+    "name": "Warner Edwards",
+    "text": [
+     "Rebranding of Warner Edwards led to triple digit growth."
+    ],
+    "did": [
+     "Brand strategy",
+     "Label design",
+     "Structure",
+     "Range extension"
+    ],
+    "award": "DBA Design Effectiveness Awards winner",
+    "img": "warner-edwards",
+    "alt": "Warner Edwards gin bottles in pink, pale green, deep blue and plum, with the gold griffin logo",
+    "w": 1719,
+    "h": 773
+   },
+   {
+    "name": "Glenmorangie",
+    "text": [
+     "Radical repositioning of a niche scotch whisky into an LVMH luxury brand."
+    ],
+    "did": [
+     "Brand strategy",
+     "Icon creation",
+     "Label design",
+     "Range extension"
+    ],
+    "award": "Wine and spirit design awards: winner, gold and silver",
+    "img": "glenmorangie",
+    "alt": "Glenmorangie bottles, a carved Celtic knotwork panel, and The Original bottle and box in gold",
+    "w": 1798,
+    "h": 790
+   },
+   {
+    "name": "Johnnie Walker Directors Blend",
+    "text": [
+     "Limited edition numbered screenprints for Johnnie Walker's exclusive Directors Blend."
+    ],
+    "did": [
+     "Concept",
+     "Label design",
+     "Illustration",
+     "Range extension"
+    ],
+    "award": "",
+    "img": "johnnie-walker",
+    "alt": "Johnnie Walker Directors Blend bottles with screenprinted labels of the striding man in purple, blue and red",
+    "w": 1764,
+    "h": 762
+   },
+   {
+    "name": "Snaps & Rye",
+    "text": [
+     "Snaps & Rye introduce interesting flavoured snaps liqueur to the UK."
+    ],
+    "did": [
+     "Concept",
+     "Label design"
+    ],
+    "award": "",
+    "img": "snaps-rye",
+    "alt": "Snaps and Rye bottles, one with a papercut label of a snowy village on orange",
+    "w": 1580,
+    "h": 708
+   }
+  ]
+ },
+ {
+  "id": "identity",
+  "title": "Corporate identity",
+  "line": "Brands people meet in airports, high streets and racecourses.",
+  "projects": [
+   {
+    "name": "Gatwick",
+    "text": [
+     "Engaging narrative and informal logo was designed to connect to passengers on a personal level."
+    ],
+    "did": [
+     "Branding concept",
+     "Copywriting",
+     "Identity design"
+    ],
+    "award": "",
+    "img": "gatwick",
+    "alt": "Gatwick script logo with the line Your London Airport, on a shopping bag, a security tray reading Nice shoes, and a wall reading A warm welcome",
+    "w": 1672,
+    "h": 587
+   },
+   {
+    "name": "Monoprix",
+    "text": [
+     "Beloved French retailer gets a refresh and a new engaging icon."
+    ],
+    "did": [
+     "Logo concept",
+     "Identity design"
+    ],
+    "award": "",
+    "img": "monoprix",
+    "alt": "Monoprix and Monop' shopfronts with the red speech mark icon and a bubble saying bonjour",
+    "w": 1800,
+    "h": 481
+   },
+   {
+    "name": "Weatherbys",
+    "text": [
+     "Redesigning a 250 year old company at the heart of British horse racing. The previous logo was based on a Stubbs oil painting."
+    ],
+    "did": [
+     "Identity design"
+    ],
+    "award": "",
+    "img": "weatherbys",
+    "alt": "Weatherbys logo development from a Stubbs painting through concepts to the final green tree mark",
+    "w": 1724,
+    "h": 380
+   }
+  ]
+ },
+ {
+  "id": "timeline",
+  "title": "The Chiswick Timeline",
+  "line": "A history in art and maps.",
+  "projects": []
+ },
+ {
+  "id": "portraits",
+  "title": "Cut paper portraits",
+  "line": "\"Instead of making sourdough during lockdown I decided to do animal portrait collages made from cut and torn paper.\"",
+  "projects": []
+ },
+ {
+  "id": "concept",
+  "title": "Take the Sniff Test",
+  "line": "A campaign concept for Butternut Box.",
+  "projects": []
+ }
+]

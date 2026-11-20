@@ -2,7 +2,7 @@
 
 Concepts first, code second. Each design is a different way of thinking about Sarah, built from its own section below. All five use only facts already on the site or in public material, and every image is Sarah's own work from her portfolio unless it says otherwise.
 
-Status: concepts, 20 November 2026. Not yet built. The current designs 1 to 5 are a first pass that share one layout; these replace them once Dinis says go.
+Status: built 20 November 2026 as site/designs/1.html to 5.html. The home page uses The Shelf.
 
 ## Sources
 

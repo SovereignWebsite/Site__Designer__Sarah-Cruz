@@ -8,7 +8,7 @@
 
 ## 2. Paste this message
 
-> I am Sarah Cruz and this repository is my portfolio website, published at https://sarah-cruz.designer.sovereignweb.site. Please read CLAUDE.md, README.md and docs/handover.md first. The words and pictures are in tools/template.html, the looks are in site/css/, and you rebuild the pages with `python3 tools/build.py`. Only use facts I give you: never invent a client, a figure or a quote, and credit every photograph. Use plain British English with no em dashes. Keep the site static, with no cookies or tracking. Push to the `dev` branch only; that publishes the site. Show me what you plan to change before you push.
+> I am Sarah Cruz and this repository is my portfolio website, published at https://sarah-cruz.designer.sovereignweb.site. Please read CLAUDE.md, README.md and docs/handover.md first. Projects are in tools/work.json, the other words in tools/designs.py, the looks in site/css/ and site/js/, and you rebuild every page with `python3 tools/designs.py`. Only use facts I give you: never invent a client, a figure or a quote, and credit every photograph. Use plain British English with no em dashes. Keep the site static, with no cookies or tracking. Push to the `dev` branch only; that publishes the site. Show me what you plan to change before you push.
 >
 > What I would like to change: (write it here)
 

@@ -1,1 +1,41 @@
-/* Design 1: Editorial. The base styles, with pastel sections taken from Sarah's own portfolio. */
+/* 1. The Wine List: ivory list paper, ink, a claret rule. Text leads; images wait to be asked for. */
+body.d1{--bg:#f7f2e7;--surface:#fffdf8;--fg:#1d1a16;--muted:#5c544a;--line:#d9cfbd;--accent:#7a1f2b;--display:var(--serif)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body.d1{--bg:#16130f;--surface:#1f1b16;--fg:#f1e9da;--muted:#b9ad99;--line:#3b342b;--accent:#e49aa3}}
+:root[data-theme="dark"] body.d1{--bg:#16130f;--surface:#1f1b16;--fg:#f1e9da;--muted:#b9ad99;--line:#3b342b;--accent:#e49aa3}
+.d1{font-family:var(--serif)}
+.listhead{max-width:80rem;margin:0 auto;padding:clamp(2rem,6vw,5rem) 1rem 2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2rem 3rem;align-items:start}
+.mast .house{font-variant:small-caps;letter-spacing:.2em;color:var(--accent);margin:0}
+.mast h1{font-size:clamp(3.4rem,10vw,7.5rem);letter-spacing:-.02em;margin:.2rem 0 .6rem;line-height:.95}
+.mast .estate{font-style:italic;font-size:1.2rem;color:var(--muted);border-top:2px solid var(--accent);border-bottom:1px solid var(--accent);padding:.5rem 0;margin:0 0 1rem}
+.mast .lede{font-family:var(--sans);font-size:1.05rem;margin:0}
+.contents h2{font-variant:small-caps;letter-spacing:.15em;font-size:1rem;color:var(--accent);margin-bottom:.5rem}
+.contents ol{list-style:none;margin:0;padding:0;counter-reset:c}
+.contents li{counter-increment:c}
+.contents a{display:flex;gap:.5rem;align-items:baseline;color:var(--fg);text-decoration:none;padding:.45rem 0;border-bottom:1px dotted var(--line);min-height:24px}
+.contents a::before{content:counter(c,upper-roman) ".";color:var(--accent);min-width:2.2rem;font-size:.9rem}
+.contents a span{flex:1}.contents b{font-weight:400;color:var(--muted);font-size:.9rem}
+.contents a:hover span{color:var(--accent)}
+.label-hero img{box-shadow:12px 12px 0 var(--accent),0 30px 50px -25px rgba(0,0,0,.5);transform:rotate(1.5deg)}
+.label-hero figcaption{margin-top:1.2rem;font-style:italic}
+.list{max-width:62rem;margin:0 auto;padding:0 1rem 3rem}
+.region{padding:2.5rem 0;border-top:3px double var(--line)}
+.region h2{font-size:clamp(2rem,5vw,3.2rem);font-variant:small-caps;letter-spacing:.04em}
+.region .sub{font-style:italic;color:var(--muted);margin:.3rem 0 1.2rem}
+.entry{border-bottom:1px solid var(--line)}
+.entry summary{display:flex;align-items:baseline;gap:.6rem;padding:.8rem 0;cursor:pointer;list-style:none;min-height:24px}
+.entry summary::-webkit-details-marker{display:none}
+.entry .nm{font-size:1.35rem}
+.entry .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-.3em);min-width:1rem}
+.entry .medal{font-family:var(--sans);font-size:.85rem;color:var(--accent);text-align:right;max-width:45%}
+.entry summary:hover .nm,.entry[open] .nm{color:var(--accent)}
+.entry summary::after{content:"+";font-family:var(--sans);color:var(--accent);width:1rem;text-align:center}
+.entry[open] summary::after{content:"\2212"}
+.pour{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem;padding:.5rem 0 1.5rem}
+.pour img{border-radius:2px;box-shadow:0 18px 30px -18px rgba(0,0,0,.45)}
+.tasting{font-style:italic;font-size:1.1rem;margin:0 0 .8rem}
+.notes{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.3rem}
+.notes li{font:500 .75rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);padding:.35rem .5rem;color:var(--muted)}
+.tl-row{display:grid;grid-template-columns:1fr 2fr 2fr 1.5fr;gap:.6rem;padding-bottom:1.5rem;align-items:start}
+.ptr{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;align-items:start;margin-bottom:1rem}
+.d1 .about p{font-size:1.05rem}
+@media (max-width:52rem){.listhead{grid-template-columns:1fr}.label-hero{order:-1}.pour{grid-template-columns:1fr}.tl-row,.ptr{grid-template-columns:1fr 1fr}}

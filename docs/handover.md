@@ -12,13 +12,13 @@ Everything on it comes from your own portfolio PDF, your LinkedIn posts and mate
 
 The same content is shown in five designs. Use the "Choose a design" bar at the top of any page to compare them:
 
-1. Editorial: pastel sections in the colours of your own portfolio (the current home page)
-2. Gallery: the work first, full width, quiet type
-3. Label: like a fine wine label, centred serif and double rules
-4. Showcase: dark gallery walls with copper accents
-5. Cut paper: torn edges and pasted photographs, after your collages
+1. The Wine List: your work as a merchant's list, with tasting notes
+2. The Shelf: your packs on a lit shop shelf, each with its ticket (the current home page)
+3. Front and Back: the page as one wine label you can turn
+4. The Timeline: one long strip with a river through it, like the Chiswick mural
+5. Cut Paper: built in layers like your portraits, with the portraits first
 
-Tell your Claude (or Dinis) which one you want as the home page. It is one line in `tools/build.py`.
+Tell your Claude (or Dinis) which one you want as the home page. It is one line (`HOME`) in `tools/designs.py`.
 
 ## Where it lives
 

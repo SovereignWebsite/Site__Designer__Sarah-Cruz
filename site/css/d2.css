@@ -1,22 +1,44 @@
-/* Design 2: Gallery. The work first: full width images, quiet sans type, no tints. */
-body.d2{--bg:#ffffff;--surface:#f6f6f4;--fg:#111111;--muted:#666660;--line:#e6e6e2;--accent:#111111;--serif:var(--sans)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body.d2{--bg:#0e0e0e;--surface:#191919;--fg:#f2f2f2;--muted:#9a9a96;--line:#262626;--accent:#f2f2f2}}
-:root[data-theme="dark"] body.d2{--bg:#0e0e0e;--surface:#191919;--fg:#f2f2f2;--muted:#9a9a96;--line:#262626;--accent:#f2f2f2}
-.d2 .section{--tint:transparent;border-top:1px solid var(--line)}
-.d2 h1,.d2 h2,.d2 h3{font-weight:600;letter-spacing:-.02em}
-.d2 .hero h1{font-size:clamp(3rem,11vw,7rem)}
-.d2 .roles,.d2 .section .head p,.d2 .contrib,.d2 .portraits figcaption{font-style:normal}
-.d2 .hero .grid{grid-template-columns:1fr}
-.d2 .hero-art{grid-template-columns:3fr 1fr;order:-1}
-.d2 .hero-art figure:nth-child(2){margin-top:0}
-.d2 .hero-art img{box-shadow:none;border-radius:0}
-.d2 .project{grid-template-columns:1fr 1fr 1fr;border-top:0;padding:2.5rem 0}
-.d2 .project .media{grid-column:1/-1}
-.d2 .project .media img{border-radius:0}
-.d2 .project>div{display:contents}
-.d2 .project h3{font-size:1.25rem}
-.d2 .contrib{display:flex;flex-wrap:wrap;gap:.2rem .8rem;align-content:start}
-.d2 .contrib::before{width:100%}
-.d2 .about img{filter:none;border-radius:0}
-.d2 .btn{border-radius:0}.d2 .designs a{border-radius:0}
-@media (max-width:44rem){.d2 .project{grid-template-columns:1fr}.d2 .hero-art{grid-template-columns:2fr 1fr}}
+/* 2. The Shelf: dark first. A cellar wall, spotlights, packs on shelf edges with tickets. */
+body.d2{--bg:#14100c;--surface:#1f1913;--fg:#f4ece0;--muted:#c4b6a2;--line:#3b3026;--accent:#f0b35a;--wood:#5a3b22;--wood2:#3a2615;--display:"Didot","Bodoni 72","Bodoni MT",var(--serif)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) body.d2{--bg:#efe6d8;--surface:#fbf6ee;--fg:#20180f;--muted:#5d4d3b;--line:#d2c2a8;--accent:#8c4a06;--wood:#a87a50;--wood2:#7b532f}}
+:root[data-theme="light"] body.d2{--bg:#efe6d8;--surface:#fbf6ee;--fg:#20180f;--muted:#5d4d3b;--line:#d2c2a8;--accent:#8c4a06;--wood:#a87a50;--wood2:#7b532f}
+.storefront{position:relative;min-height:min(92vh,58rem);display:grid;grid-template-columns:1fr 1.25fr;align-items:center;gap:2rem;padding:3rem max(1rem,calc((100vw - 80rem)/2));overflow:hidden;
+ background:radial-gradient(60rem 30rem at 70% 0%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 70%),var(--bg)}
+.storefront .glow{position:absolute;inset:auto 0 0 0;height:3.2rem;background:linear-gradient(var(--wood),var(--wood2));box-shadow:0 -14px 30px rgba(0,0,0,.55) inset,0 10px 30px rgba(0,0,0,.6)}
+.sign{position:relative;z-index:2}
+.sign h1{font-family:var(--display);font-size:clamp(3.6rem,11vw,9rem);line-height:.9;letter-spacing:-.02em}
+.sign h1 em{display:block;font-style:italic;color:var(--accent);padding-left:.6em}
+.sign .roles{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--muted)}
+.sign .lede{max-width:32rem}
+.cta a{display:inline-block;margin:.3rem .4rem 0 0;padding:.7rem 1.2rem;border-radius:99px;border:1px solid var(--accent);color:var(--fg);text-decoration:none}
+.cta a:first-child{background:var(--accent);color:var(--bg)}
+.hero-pack{position:relative;z-index:1;align-self:end;margin-bottom:3rem}
+.hero-pack img{box-shadow:0 40px 60px -20px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.06);transform:perspective(1200px) rotateY(-8deg) rotateX(2deg)}
+.aisles{position:sticky;top:3.3rem;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);border-bottom:1px solid var(--line)}
+.aisles ul{list-style:none;margin:0 auto;padding:.4rem 1rem;display:flex;gap:.5rem;overflow-x:auto;max-width:80rem;scrollbar-width:none}
+.aisles a{display:inline-block;white-space:nowrap;padding:0 .8rem;line-height:28px;border:1px solid var(--line);border-radius:99px;color:var(--fg);text-decoration:none;font-size:.85rem}
+.aisles a:hover{border-color:var(--accent);color:var(--accent)}
+.shelf{padding:3rem 0 0;background:radial-gradient(50rem 18rem at 50% 0%,color-mix(in srgb,var(--accent) 16%,transparent),transparent 70%)}
+.board{max-width:80rem;margin:0 auto;padding:0 1rem 1rem}
+.board h2{font-family:var(--display);font-size:clamp(2.2rem,6vw,4rem)}
+.board p{margin:.3rem 0 0;color:var(--muted);font-family:var(--serif);font-style:italic}
+.row{list-style:none;margin:0;padding:1.5rem max(1rem,calc((100vw - 80rem)/2)) 0;display:flex;gap:2rem;overflow-x:auto;scroll-snap-type:x proximity;align-items:flex-end;
+ background:linear-gradient(transparent calc(100% - 7.5rem),var(--wood) calc(100% - 7.5rem),var(--wood2) calc(100% - 6.4rem),transparent calc(100% - 6.4rem));scrollbar-color:var(--accent) transparent}
+.pack{flex:none;width:min(80vw,24rem);scroll-snap-align:start;display:flex;flex-direction:column}
+.pack .open{all:unset;cursor:zoom-in;display:block}
+.pack .open:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.pack img{height:15rem;width:100%;object-fit:cover;border-radius:2px;box-shadow:0 22px 24px -16px rgba(0,0,0,.8);transition:transform .25s}
+.pack .open:hover img{transform:translateY(-6px)}
+.ticket{margin:1.1rem 0 0;background:#fffdf6;color:#1b1610;padding:.55rem .7rem .6rem;font-size:.8rem;line-height:1.35;border-top:3px solid var(--accent);min-height:5.4rem;box-shadow:0 6px 10px rgba(0,0,0,.35)}
+.ticket strong{display:block;font-size:.95rem}
+.ticket span{display:block;color:#4a4036}
+.ticket .star{display:inline-block;margin-top:.3rem;background:#1b1610;color:#fdd998;padding:.1rem .4rem;font-size:.72rem;color:#ffe2ad}
+.counter{max-width:80rem;margin:0 auto;padding:4rem 1rem 1rem}
+.tl-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:.6rem}
+.tl-grid figure{grid-column:span 2}.tl-grid .tl-mural{grid-column:span 6}
+.tl-grid img{width:100%;height:100%;object-fit:cover;border-radius:2px}
+.cols{columns:2 20rem;gap:3rem;margin-top:1.5rem}
+.ptr{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;align-items:start}
+.ptr img{box-shadow:0 25px 30px -18px rgba(0,0,0,.7)}
+.big{font-family:var(--serif);font-size:clamp(1.3rem,3vw,2rem);max-width:48rem}
+@media (max-width:52rem){.storefront{grid-template-columns:1fr;min-height:auto}.hero-pack{margin-bottom:3.5rem}.ptr{grid-template-columns:1fr 1fr}.tl-grid figure{grid-column:span 3}}
