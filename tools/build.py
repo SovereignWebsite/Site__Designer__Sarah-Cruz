@@ -18,12 +18,15 @@ DESIGNS = [
 tpl = (ROOT / "tools/template.html").read_text()
 
 def page(n, root, current):
-    links = []
-    for i, name, _ in DESIGNS:
-        href = (root + "designs/%d.html" % i)
+    cards = []
+    for i, name, line in DESIGNS:
+        href = root + "designs/%d.html" % i
         cur = ' aria-current="page"' if current == i else ""
-        links.append('<li><a href="%s"%s>%d. %s</a></li>' % (href, cur, i, name))
-    return tpl.replace("{{DESIGNS}}", "".join(links)).replace("{{ROOT}}", root).replace("{{N}}", str(n))
+        cards.append(
+            '<a class="card" role="listitem" href="%s"%s>'
+            '<img src="%simg/shots/d%d.webp" alt="" width="640" height="400" loading="lazy">'
+            '<strong>%d. %s</strong><span>%s</span></a>' % (href, cur, root, i, i, name, line))
+    return tpl.replace("{{CARDS}}", "".join(cards)).replace("{{ROOT}}", root).replace("{{N}}", str(n))
 
 (ROOT / "site/designs").mkdir(exist_ok=True)
 for n, _, _ in DESIGNS:

@@ -25,10 +25,6 @@
   </ul>
 </nav>
 
-<nav class="designs" aria-label="Choose a design">
-  <div class="wrap"><span><a href="{{ROOT}}designs/">Choose a design</a></span>
-  <ul>{{DESIGNS}}</ul></div>
-</nav>
 <header class="top">
   <div class="wrap">
     <a class="name" href="#main">Sarah Cruz</a>
@@ -45,6 +41,10 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <details class="chooser">
+      <summary>Choose a design</summary>
+      <div class="cards" role="list">{{CARDS}}</div>
+    </details>
     <button class="theme" type="button" aria-label="Switch between light and dark" title="Light or dark. Remembered in this browser only.">&#9680;</button>
   </div>
 </header>
