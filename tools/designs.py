@@ -115,7 +115,7 @@ def header(root, current, links):
 
 def footer(root=""):
     return ('<footer class="foot"><div class="in">'
-            f'<p class="flinks"><a href="{root}start/">Start here</a> <a href="{root}agents/">Use with your AI</a> <a href="{root}llms.txt">llms.txt</a> <a href="{root}admin/">How this site was made</a> <a href="{root}designs/">All five designs</a></p>'
+            f'<p class="flinks"><a href="{root}start/">Start here</a> <a href="{root}agents/">Use with your AI</a> <a href="{root}llms.txt">llms.txt</a> <a href="{root}admin/">How this site was made</a> <a href="{root}policy/">How this site is governed</a> <a href="{root}designs/">All five designs</a></p>'
             "<p>All work shown is from Sarah Cruz's own portfolio and is published with her permission. Brand names, labels and trademarks belong to their owners. The work was created for clients, often with agency colleagues; the contribution lists describe Sarah's part in each project.</p>"
             '<p>No cookies, no tracking, no third-party scripts. Your light or dark choice is remembered in this browser only. '
             'A sovereign website, made with the <a href="https://sovereignwebsite.org/">open pattern</a>. Source: '
