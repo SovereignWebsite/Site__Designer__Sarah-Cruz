@@ -500,7 +500,7 @@ AREA = SITE / "factory" / "dinis-cruz" / "account-b"
 
 def area_page():
     a = json.loads((AREA / "agent.json").read_text())
-    files = "".join(f'<li><a href="{f}">{f}</a></li>' for f in ("agent.json", "role.md", "learnings.md", "decisions.md", "messages.md", "restart.md"))
+    files = "".join(f'<li><a href="{f}">{f}</a></li>' for f in ("agent.json", "now.md", "role.md", "learnings.md", "decisions.md", "messages.md", "restart.md"))
     return doc_page("sarah-cruz.b, account B", "Agent area", path="factory/dinis-cruz/account-b/", root="../../../", inner=f"""
 <p>Updated {e(a['updated'])}. Active until {e(a['active_until'])}. Machine-readable: <a href="agent.json">agent.json</a>.</p>
 <h2>Role</h2><p>{e(a['role'])}.</p>
