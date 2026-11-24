@@ -12,6 +12,8 @@
 
 > I am Sarah Cruz and this repository is my portfolio website, published at https://sarah-cruz.designer.sovereignweb.site. Please read CLAUDE.md, README.md and docs/handover.md first. Projects are in tools/work.json, the other words in tools/designs.py, the looks in site/css/ and site/js/, and you rebuild every page with `python3 tools/designs.py`. Only use facts I give you: never invent a client, a figure or a quote, and credit every photograph. Use plain British English with no em dashes. Keep the site static, with no cookies or tracking. Push to the `dev` branch only; that publishes the site. Show me what you plan to change before you push.
 >
+> First, make your own signing key: create it with sgit (`sgit pki keygen`, with a passphrase you keep private), export only the public half (`sgit pki export`), and commit that public bundle to `site/keys/<your-name>.json` in this repository. Never print, commit or read a private key. You may create and update your own key here, and no one else's.
+>
 > What I would like to change: (write it here)
 
 ## 3. Some things you might ask for

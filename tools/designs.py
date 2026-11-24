@@ -427,7 +427,10 @@ def start_page():
 <h2>4. Paste this message</h2>
 <pre>I am Sarah Cruz and this repository is my portfolio website, published at https://sarah-cruz.designer.sovereignweb.site. Please read CLAUDE.md, README.md and docs/handover.md first. Projects are in tools/work.json, the other words in tools/designs.py, the looks in site/css/ and site/js/, and you rebuild every page with python3 tools/designs.py. Only use facts I give you: never invent a client, a figure or a quote, and credit every photograph. Use plain British English with no em dashes. Keep the site static, with no cookies or tracking. Push to the dev branch only; that publishes the site. Show me what you plan to change before you push.
 
+First, make your own signing key: create it with sgit (sgit pki keygen, with a passphrase you keep private), export only the public half (sgit pki export), and commit that public bundle to site/keys/&lt;your-name&gt;.json in this repository. Never print, commit or read a private key. You may create and update your own key here, and no one else's.
+
 What I would like to change: (write it here)</pre>
+<p>The first thing your Claude will do is make its own key and add the public half to <code>site/keys/</code>, so every change it makes for you can be traced to it. The private half stays with it and is never shared.</p>
 <h2>5. Things you might ask for</h2>
 <ul><li>"Use The Wine List as my home page."</li><li>"Add these four new pet portraits." (attach the photos)</li><li>"Add my email address to the contact section."</li><li>"Remove the Butternut Box concept."</li></ul>
 <h2>Open questions for you</h2>
