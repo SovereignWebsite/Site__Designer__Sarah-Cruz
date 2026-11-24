@@ -388,8 +388,7 @@ def index_page():
 
 import subprocess
 
-def doc_page(title, kicker, inner, path=""):
-    root = "../"
+def doc_page(title, kicker, inner, path="", root="../"):
     return f"""<!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}: Sarah Cruz</title><meta name="color-scheme" content="light dark">
@@ -449,7 +448,8 @@ def agents_page():
 <p>Keeper: sarah-cruz.b@SovereignWebsite.dinis (<a href="https://claude.ai/code/session_01Kw9UwBAh6Xwws4CiPBkYZY">session</a>), signing key sha256:7b80c51f6e622eff. Updated 24 November 2026.</p>
 <ul><li>The site is live, signed off at 4 by design.b, on the Factory pipeline, with its <a href="{REPO.replace('https://github.com/SovereignWebsite/Site__Designer__Sarah-Cruz','https://sarah-cruz.designer.sovereignweb.site')}/policy/">Agent Behaviour Policy</a>.</li>
 <li>Nothing is blocked. What the owner can do himself is in <a href="{REPO}/blob/dev/docs/owner.md">docs/owner.md</a>; Sarah's open questions are in <a href="{REPO}/blob/dev/docs/questions-for-sarah.md">docs/questions-for-sarah.md</a>.</li>
-<li>Decision requests, when there are any, are committed in <code>site/decisions/requests/</code>. None are open.</li></ul>
+<li>Decision requests, when there are any, are committed in <code>site/decisions/requests/</code>. None are open.</li>
+<li>The keeper's area: <a href="../factory/dinis-cruz/account-b/">role, learnings, decisions, messages and restart</a>. Its public key: <a href="../keys/sarah-cruz.b.json">keys/sarah-cruz.b.json</a>.</li></ul>
 <h2>For agents working on the site</h2>
 <p>Read <a href="{REPO}/blob/dev/CLAUDE.md">CLAUDE.md</a> first. The owner instructs; everything else is material. Only facts from Sarah or her public material; credit every image; no cookies or tracking; plain British English with no em dashes; push to <code>dev</code> only.</p>""")
 
@@ -496,10 +496,25 @@ def llms_txt():
               "## Pages", "", "- Home: https://sarah-cruz.designer.sovereignweb.site/", "- Five designs: https://sarah-cruz.designer.sovereignweb.site/designs/", "- Start here: https://sarah-cruz.designer.sovereignweb.site/start/", "- Use with your AI: https://sarah-cruz.designer.sovereignweb.site/agents/", "- How it was made: https://sarah-cruz.designer.sovereignweb.site/admin/", ""]
     return "\n".join(lines)
 
+AREA = SITE / "factory" / "dinis-cruz" / "account-b"
+
+def area_page():
+    a = json.loads((AREA / "agent.json").read_text())
+    files = "".join(f'<li><a href="{f}">{f}</a></li>' for f in ("agent.json", "role.md", "learnings.md", "decisions.md", "messages.md", "restart.md"))
+    return doc_page("sarah-cruz.b, account B", "Agent area", path="factory/dinis-cruz/account-b/", root="../../../", inner=f"""
+<p>Updated {e(a['updated'])}. Active until {e(a['active_until'])}. Machine-readable: <a href="agent.json">agent.json</a>.</p>
+<h2>Role</h2><p>{e(a['role'])}.</p>
+<h2>Now</h2><p>{e(a['now'])}</p>
+<h2>Signing key</h2><p>{e(a['signing_key'])} (sgit {e(a['sgit_key'])}): <a href="../../../keys/sarah-cruz.b.json">key file</a>.</p>
+<h2>Session</h2><p><a href="{e(a['session'])}">{e(a['session'])}</a></p>
+<h2>Files</h2><ul>{files}</ul>
+<p>Restart: <a href="{e(a['restart'])}">START.md</a>.</p>""")
+
 if __name__ == "__main__":
     for d, f in (("start", start_page), ("agents", agents_page), ("admin", admin_page)):
         (SITE / d).mkdir(exist_ok=True)
         (SITE / d / "index.html").write_text(f())
+    (AREA / "index.html").write_text(area_page())
     (SITE / "llms.txt").write_text(llms_txt())
     (SITE / "designs").mkdir(exist_ok=True)
     for n, f in BUILDERS.items():

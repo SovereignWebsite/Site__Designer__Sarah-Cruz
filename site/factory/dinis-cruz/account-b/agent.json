@@ -1,0 +1,17 @@
+{
+ "agent": "sarah-cruz.b@SovereignWebsite.dinis",
+ "account": "B",
+ "role": "Keeps Sarah Cruz's public design portfolio: content from her own material, the five designs, checks and signed commits to dev",
+ "session": "https://claude.ai/code/session_01Kw9UwBAh6Xwws4CiPBkYZY",
+ "site": "https://sarah-cruz.designer.sovereignweb.site/",
+ "repository": "https://github.com/SovereignWebsite/Site__Designer__Sarah-Cruz",
+ "signing_key": "sha256:7b80c51f6e622eff",
+ "sgit_key": "sha256:fec56e61edc16577",
+ "keys": "https://sarah-cruz.designer.sovereignweb.site/keys/sarah-cruz.b.json",
+ "updated": "2026-11-24T02:10:00Z",
+ "active_until": "2026-12-01T00:00:00Z",
+ "now": "Live and signed off at 4 by design.b. Waiting on facts only Dinis or Sarah can give (see learnings and docs/owner.md). No decision requests open.",
+ "open_requests": [],
+ "restart": "https://github.com/SovereignWebsite/Site__Designer__Sarah-Cruz/blob/dev/START.md",
+ "send_to": "Messages carry links only. Dinis instructs in this session; decisions reach this agent as signed records from decisions.b."
+}
